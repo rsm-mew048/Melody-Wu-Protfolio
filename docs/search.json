@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Bid Win Rate Prediction – PRS Capstone\n\n\n\n\n\n\nMelody Wu\n\n\nApr 1, 2025\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/prs-capstone/index.html",
+    "href": "projects/prs-capstone/index.html",
+    "title": "Bid Win Rate Prediction – PRS Capstone",
+    "section": "",
+    "text": "Client: Pavement Recycling Systems (California public works)\nGoal: Predict bid win probability using historical estimate data from B2W & D365."
+  },
+  {
+    "objectID": "projects/prs-capstone/index.html#key-contributions",
+    "href": "projects/prs-capstone/index.html#key-contributions",
+    "title": "Bid Win Rate Prediction – PRS Capstone",
+    "section": "Key Contributions",
+    "text": "Key Contributions\n\nBuilt a win probability model using logistic regression + gradient boosting\nConducted budget vs. actual cost variance analysis\nDelivered actionable insights to improve bid strategy"
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Resume",
+    "section": "",
+    "text": "Download PDF file."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Fengqinfei (Melody) Wu",
+    "section": "",
+    "text": "MS in Business Analytics (STEM OPT) candidate at UC San Diego, Rady School of Management.\nExperienced in end-to-end data workflows — from SQL & Python-based analysis to ML modeling (supervised, ensemble, deep learning) and interactive dashboards in Tableau & Power BI.\nPast roles span IT financial systems at UNM, customer analytics at China Railway Materials, and a current capstone partnership with an industry client in California.\nCurrently seeking Data Analyst / Business Analyst / PM roles."
+  }
+]

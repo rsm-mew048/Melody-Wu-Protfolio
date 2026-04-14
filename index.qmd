@@ -1,0 +1,21 @@
+---
+title: "Fengqinfei (Melody) Wu"
+image: "files/profile_pic.jpg"
+about:
+  template: jolla
+  links:
+    - icon: envelope
+      href: mailto:fqinfeiwu@gmail.com
+    - icon: linkedin
+      href: https://www.linkedin.com/in/melodywu0808
+    - icon: github
+      href: https://github.com/rsm-mew048
+---
+
+MS in Business Analytics (STEM OPT) candidate at UC San Diego, Rady School of Management.
+
+Experienced in end-to-end data workflows — from SQL & Python-based analysis to ML modeling (supervised, ensemble, deep learning) and interactive dashboards in Tableau & Power BI.
+
+Past roles span IT financial systems at UNM, customer analytics at China Railway Materials, and a current capstone partnership with an industry client in California.
+
+Currently seeking **Data Analyst / Business Analyst / PM** roles.

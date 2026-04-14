@@ -1,0 +1,20 @@
+{
+  "projects/prs-capstone/index.qmd": {
+    "index.html": "a887f0ab"
+  },
+  "projects/wine-analysis/index.qmd": {
+    "index.html": "22c7ba60"
+  },
+  "projects.qmd": {
+    "projects.html": "5bcf8544"
+  },
+  "index.qmd": {
+    "index.html": "f0b81bd4"
+  },
+  "about.qmd": {
+    "about.html": "47ff67b6"
+  },
+  "resume.qmd": {
+    "resume.html": "203a9929"
+  }
+}

@@ -1,0 +1,15 @@
+---
+title: "Bid Win Rate Prediction – PRS Capstone"
+author: Melody Wu
+date: 2025-04-01
+categories: [Machine Learning, Business Analytics]
+image: "thumbnail.png"   # 可选，放一张项目截图
+---
+
+**Client:** Pavement Recycling Systems (California public works)  
+**Goal:** Predict bid win probability using historical estimate data from B2W & D365.
+
+## Key Contributions
+- Built a win probability model using logistic regression + gradient boosting
+- Conducted budget vs. actual cost variance analysis
+- Delivered actionable insights to improve bid strategy
