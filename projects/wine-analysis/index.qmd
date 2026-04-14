@@ -1,0 +1,12 @@
+---
+title: "Global Wine Market Investment & Sourcing Strategy"
+author: Melody Wu
+date: 2025-05-01
+categories: [Tableau, Data Visualization]
+---
+
+Built an interactive Tableau dashboard analyzing 130,000+ wine reviews 
+and macroeconomic data to guide sourcing and investment decisions for 
+wine distributors. Identified pricing arbitrage opportunities across 
+global markets through integrated analysis of quality ratings, 
+production volumes, and GDP indicators.

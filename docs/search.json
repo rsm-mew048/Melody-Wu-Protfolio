@@ -11,7 +11,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Bid Win Rate Prediction – PRS Capstone\n\n\n\n\n\n\nMelody Wu\n\n\nApr 1, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "Global Wine Market Investment & Sourcing Strategy\n\n\n\n\n\n\nMelody Wu\n\n\nMay 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nBid Win Rate Prediction – PRS Capstone\n\n\n\n\n\n\nMelody Wu\n\n\nApr 1, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/prs-capstone/index.html",
@@ -33,6 +33,13 @@
     "title": "Resume",
     "section": "",
     "text": "Download PDF file."
+  },
+  {
+    "objectID": "projects/wine-analysis/index.html",
+    "href": "projects/wine-analysis/index.html",
+    "title": "Global Wine Market Investment & Sourcing Strategy",
+    "section": "",
+    "text": "Built an interactive Tableau dashboard analyzing 130,000+ wine reviews and macroeconomic data to guide sourcing and investment decisions for wine distributors. Identified pricing arbitrage opportunities across global markets through integrated analysis of quality ratings, production volumes, and GDP indicators."
   },
   {
     "objectID": "index.html",
