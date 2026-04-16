@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: docs        # GitHub Pages 需要这个
+  output-dir: docs
 
 website:
   title: "Melody Wu"
@@ -10,6 +10,8 @@ website:
         text: About
       - href: projects.qmd
         text: Projects
+      - href: posts/index.qmd    # ← 新加
+        text: Blog               # ← 新加
       - href: resume.qmd
         text: Resume
 

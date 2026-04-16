@@ -5,5 +5,11 @@
       "/projects/wine-analysis/index.html",
       "/projects/prs-capstone/index.html"
     ]
+  },
+  {
+    "listing": "/posts/index.html",
+    "items": [
+      "/posts/hw1-ab-testing/index.html"
+    ]
   }
 ]

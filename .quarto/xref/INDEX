@@ -16,5 +16,11 @@
   },
   "resume.qmd": {
     "resume.html": "203a9929"
+  },
+  "posts/index.qmd": {
+    "index.html": "83e98c5b"
+  },
+  "posts/hw1-ab-testing/index.qmd": {
+    "index.html": "7f288d3f"
   }
 }
