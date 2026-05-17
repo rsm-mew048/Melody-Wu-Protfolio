@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Melody Wu">
+<meta name="dcterms.date" content="2026-05-17">
+
+<title>Does Price Matter in Charitable Giving? – Melody Wu</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Melody Wu</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../resume.html"> 
+<span class="menu-text">Resume</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Does Price Matter in Charitable Giving?</h1>
+<p class="subtitle lead">Replication of Karlan &amp; List (2007)</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">causal inference</div>
+    <div class="quarto-category">field experiment</div>
+    <div class="quarto-category">replication</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Melody Wu </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 17, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>How do you get people to donate more to charity? One popular fundraising strategy is the <strong>matching gift</strong>: a lead donor pledges to match every dollar given by the public at some ratio (1:1, 2:1, or 3:1). Fundraising consultants swear by this technique, especially the conventional wisdom that bigger match ratios are more powerful. But is that actually true?</p>
+<p>Dean Karlan and John A. List set out to answer this question rigorously using a <strong>large-scale natural field experiment</strong> — a randomized controlled trial embedded in a real fundraising campaign rather than a laboratory. In 2005, they partnered with a liberal U.S. nonprofit organization (focused on civil liberties) and sent direct-mail solicitations to over <strong>50,000 prior donors</strong>. Crucially, donors were randomly assigned to treatment and control conditions, which allows the authors to make <strong>causal claims</strong> about what drives giving.</p>
+<p>The experimental design had three layers of randomization:</p>
+<ol type="1">
+<li><strong>Match vs.&nbsp;no match</strong> — Two-thirds of donors (33,396) received a letter announcing a matching grant from an anonymous fellow member; one-third (16,687) served as the control group.</li>
+<li><strong>Match ratio</strong> — Among those in the treatment group, letters were further randomized to offer a $1:$1, $2:$1, or $3:$1 match.</li>
+<li><strong>Match threshold and example ask amount</strong> — The maximum matching pool size ($25k, $50k, $100k, or unstated) and the example donation amount highlighted in the letter were also varied.</li>
+</ol>
+<p>The paper’s main findings are striking: while <em>having any match at all</em> significantly increases both response rates and revenue, <strong>larger match ratios (2:1 or 3:1) do not outperform the basic 1:1 match</strong>. The authors also discover a striking geographic pattern: the matching grant effect is entirely driven by donors in Republican-leaning (“red”) states.</p>
+</section>
+<section id="main-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="main-analysis">Main Analysis</h2>
+<section id="randomization-check" class="level3">
+<h3 class="anchored" data-anchor-id="randomization-check">Randomization Check</h3>
+<p>Before examining outcomes, Table 1 of the paper verifies that the random assignment worked — that treatment and control groups look similar on observable characteristics. Below I confirm this for the key demographic variables available in the replication dataset.</p>
+<div id="48b052b8" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyreadstat</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">'ignore'</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>df, meta <span class="op">=</span> pyreadstat.read_dta(<span class="st">'AERtables1-5__1_.dta'</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[df[<span class="st">'gave'</span>].notna() <span class="op">&amp;</span> df[<span class="st">'amount'</span>].notna()].copy()</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>ctrl <span class="op">=</span> df[df[<span class="st">'control'</span>]<span class="op">==</span><span class="dv">1</span>]</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>treat <span class="op">=</span> df[df[<span class="st">'treatment'</span>]<span class="op">==</span><span class="dv">1</span>]</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>balance_vars <span class="op">=</span> {</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Highest Previous Contribution ($)'</span>: <span class="st">'HPA'</span>,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Proportion Female'</span>: <span class="st">'female'</span>,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Proportion Couple'</span>: <span class="st">'couple'</span>,</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Years Since Initial Donation'</span>: <span class="st">'years'</span>,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Proportion in Red State'</span>: <span class="st">'red0'</span>,</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>rows <span class="op">=</span> []</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> label, var <span class="kw">in</span> balance_vars.items():</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    c_mean <span class="op">=</span> ctrl[var].mean()</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    t_mean <span class="op">=</span> treat[var].mean()</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    t_stat, p_val <span class="op">=</span> stats.ttest_ind(ctrl[var].dropna(), treat[var].dropna())</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    rows.append({<span class="st">'Variable'</span>: label,</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>                 <span class="st">'Control Mean'</span>: <span class="bu">round</span>(c_mean, <span class="dv">3</span>),</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>                 <span class="st">'Treatment Mean'</span>: <span class="bu">round</span>(t_mean, <span class="dv">3</span>),</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>                 <span class="st">'p-value'</span>: <span class="bu">round</span>(p_val, <span class="dv">3</span>)})</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>balance_df <span class="op">=</span> pd.DataFrame(rows)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(balance_df.to_string(index<span class="op">=</span><span class="va">False</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                         Variable  Control Mean  Treatment Mean  p-value
+Highest Previous Contribution ($)        58.960          59.597    0.345
+                Proportion Female         0.283           0.275    0.079
+                Proportion Couple         0.093           0.091    0.559
+     Years Since Initial Donation         6.136           6.078    0.270
+          Proportion in Red State         0.399           0.407    0.061</code></pre>
+</div>
+</div>
+<p>The treatment and control groups look nearly identical across all variables, confirming that randomization was successful. There are no statistically significant differences at the 5% level. This is what gives the experiment its power: any difference in outcomes between groups can be attributed causally to the match treatment, not to pre-existing differences in donor characteristics.</p>
+</section>
+<section id="replicating-table-2a-response-rates-and-dollars-given" class="level3">
+<h3 class="anchored" data-anchor-id="replicating-table-2a-response-rates-and-dollars-given">Replicating Table 2A: Response Rates and Dollars Given</h3>
+<p>The primary outcome measures are (1) whether a donor gave at all (<em>response rate</em>) and (2) the unconditional dollar amount given. I replicate the key summary statistics from Table 2A of the paper.</p>
+<div id="36a092f7" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> []</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>groups <span class="op">=</span> [</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'Control'</span>, df[df[<span class="st">'control'</span>]<span class="op">==</span><span class="dv">1</span>]),</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'Any Treatment'</span>, df[df[<span class="st">'treatment'</span>]<span class="op">==</span><span class="dv">1</span>]),</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'1:1 Match'</span>, df[df[<span class="st">'ratio'</span>]<span class="op">==</span><span class="dv">1</span>]),</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2:1 Match'</span>, df[df[<span class="st">'ratio'</span>]<span class="op">==</span><span class="dv">2</span>]),</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'3:1 Match'</span>, df[df[<span class="st">'ratio'</span>]<span class="op">==</span><span class="dv">3</span>]),</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name, sub <span class="kw">in</span> groups:</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    rr <span class="op">=</span> sub[<span class="st">'gave'</span>].mean()</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    rr_se <span class="op">=</span> sub[<span class="st">'gave'</span>].sem()</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    amt <span class="op">=</span> sub[<span class="st">'amount'</span>].mean()</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    amt_se <span class="op">=</span> sub[<span class="st">'amount'</span>].sem()</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    results.append({</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Group'</span>: name,</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">'N'</span>: <span class="bu">len</span>(sub),</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Response Rate'</span>: <span class="ss">f"</span><span class="sc">{</span>rr<span class="sc">:.4f}</span><span class="ss">"</span>,</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        <span class="st">'SE'</span>: <span class="ss">f"(</span><span class="sc">{</span>rr_se<span class="sc">:.4f}</span><span class="ss">)"</span>,</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Dollars Given (uncond.)'</span>: <span class="ss">f"</span><span class="sc">{</span>amt<span class="sc">:.3f}</span><span class="ss">"</span>,</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>        <span class="st">'SE '</span>: <span class="ss">f"(</span><span class="sc">{</span>amt_se<span class="sc">:.3f}</span><span class="ss">)"</span>,</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pd.DataFrame(results).to_string(index<span class="op">=</span><span class="va">False</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        Group     N Response Rate       SE Dollars Given (uncond.)     SE 
+      Control 16687        0.0179 (0.0010)                   0.813 (0.063)
+Any Treatment 33396        0.0220 (0.0008)                   0.967 (0.049)
+    1:1 Match 11133        0.0207 (0.0014)                   0.937 (0.089)
+    2:1 Match 11134        0.0226 (0.0014)                   1.026 (0.089)
+    3:1 Match 11129        0.0227 (0.0014)                   0.938 (0.077)</code></pre>
+</div>
+</div>
+<p>These numbers match Table 2A in the paper closely. The treatment group’s response rate is <strong>22% higher</strong> than control (0.022 vs.&nbsp;0.018), and revenue per solicitation is about <strong>19% higher</strong> ($0.967 vs.&nbsp;$0.813). Yet the response rates for the 1:1, 2:1, and 3:1 conditions are nearly identical — no larger ratio provides additional lift.</p>
+</section>
+<section id="replicating-table-3-probit-regression-on-likelihood-of-giving" class="level3">
+<h3 class="anchored" data-anchor-id="replicating-table-3-probit-regression-on-likelihood-of-giving">Replicating Table 3: Probit Regression on Likelihood of Giving</h3>
+<p>To test significance formally, the authors use <strong>probit regression</strong> — appropriate for binary outcomes like whether someone donated. The key regression is:</p>
+<p><span class="math display">\[Y_i = \alpha_0 + \alpha_1 T_i + \varepsilon_i\]</span></p>
+<p>where <span class="math inline">\(Y_i = 1\)</span> if individual <span class="math inline">\(i\)</span> donated, and <span class="math inline">\(T_i = 1\)</span> if they received any match offer.</p>
+<div id="d4d4db60" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.formula.api <span class="im">as</span> smf</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Column 1: Simple probit (treatment vs. control)</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>probit1 <span class="op">=</span> smf.probit(<span class="st">'gave ~ treatment'</span>, data<span class="op">=</span>df).fit(disp<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>me1 <span class="op">=</span> probit1.get_margeff()</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Column 2: Probit with sub-treatment interactions</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>probit2 <span class="op">=</span> smf.probit(</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'gave ~ treatment + treatment:ratio2 + treatment:ratio3 + '</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'treatment:size25 + treatment:size50 + treatment:size100 + '</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'treatment:askd2 + treatment:askd3'</span>,</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>df</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>).fit(disp<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>me2 <span class="op">=</span> probit2.get_margeff()</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>label_map <span class="op">=</span> {</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">'treatment'</span>: <span class="st">'Treatment (any match)'</span>,</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">'treatment:ratio2'</span>: <span class="st">'Treatment × 2:1 ratio'</span>,</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">'treatment:ratio3'</span>: <span class="st">'Treatment × 3:1 ratio'</span>,</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">'treatment:size25'</span>: <span class="st">'Treatment × $25k threshold'</span>,</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">'treatment:size50'</span>: <span class="st">'Treatment × $50k threshold'</span>,</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">'treatment:size100'</span>: <span class="st">'Treatment × $100k threshold'</span>,</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">'treatment:askd2'</span>: <span class="st">'Treatment × medium ask'</span>,</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">'treatment:askd3'</span>: <span class="st">'Treatment × high ask'</span>,</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>rows <span class="op">=</span> []</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>sf <span class="op">=</span> me2.summary_frame()</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> var <span class="kw">in</span> sf.index:</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    rows.append({</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Variable'</span>: label_map.get(var, var),</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Marginal Effect'</span>: <span class="ss">f"</span><span class="sc">{</span>sf<span class="sc">.</span>loc[var, <span class="st">'dy/dx'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>,</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Std. Error'</span>: <span class="ss">f"(</span><span class="sc">{</span>sf<span class="sc">.</span>loc[var, <span class="st">'Std. Err.'</span>]<span class="sc">:.4f}</span><span class="ss">)"</span>,</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>        <span class="st">'p-value'</span>: <span class="ss">f"</span><span class="sc">{</span>sf<span class="sc">.</span>loc[var, <span class="st">'Pr(&gt;|z|)'</span>]<span class="sc">:.3f}</span><span class="ss">"</span>,</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>me1_row <span class="op">=</span> {</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Variable'</span>: <span class="st">'Treatment (simple model)'</span>,</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Marginal Effect'</span>: <span class="ss">f"</span><span class="sc">{</span>me1<span class="sc">.</span>margeff[<span class="dv">0</span>]<span class="sc">:.4f}</span><span class="ss">"</span>,</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Std. Error'</span>: <span class="ss">f"(</span><span class="sc">{</span>me1<span class="sc">.</span>margeff_se[<span class="dv">0</span>]<span class="sc">:.4f}</span><span class="ss">)"</span>,</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    <span class="st">'p-value'</span>: <span class="ss">f"</span><span class="sc">{</span>me1<span class="sc">.</span>pvalues[<span class="dv">0</span>]<span class="sc">:.3f}</span><span class="ss">"</span>,</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Simple Probit (Column 1):"</span>)</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Treatment: </span><span class="sc">{</span>me1_row[<span class="st">'Marginal Effect'</span>]<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>me1_row[<span class="st">'Std. Error'</span>]<span class="sc">}</span><span class="ss">  p=</span><span class="sc">{</span>me1_row[<span class="st">'p-value'</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Pseudo R²: </span><span class="sc">{</span>probit1<span class="sc">.</span>prsquared<span class="sc">:.4f}</span><span class="ss">  N=</span><span class="sc">{</span><span class="bu">int</span>(probit1.nobs)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Full Probit with Sub-treatment Interactions (Column 2):"</span>)</span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pd.DataFrame(rows).to_string(index<span class="op">=</span><span class="va">False</span>))</span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Pseudo R²: </span><span class="sc">{</span>probit2<span class="sc">.</span>prsquared<span class="sc">:.4f}</span><span class="ss">  N=</span><span class="sc">{</span><span class="bu">int</span>(probit2.nobs)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Simple Probit (Column 1):
+  Treatment: 0.0043 (0.0014)  p=0.002
+  Pseudo R²: 0.0010  N=50083
+
+Full Probit with Sub-treatment Interactions (Column 2):
+                   Variable Marginal Effect Std. Error p-value
+      Treatment (any match)          0.0024   (0.0025)   0.338
+      Treatment × 2:1 ratio          0.0018   (0.0019)   0.334
+      Treatment × 3:1 ratio          0.0019   (0.0019)   0.308
+ Treatment × $25k threshold         -0.0006   (0.0022)   0.787
+ Treatment × $50k threshold          0.0002   (0.0021)   0.915
+Treatment × $100k threshold         -0.0001   (0.0021)   0.959
+     Treatment × medium ask          0.0010   (0.0019)   0.611
+       Treatment × high ask          0.0015   (0.0019)   0.434
+  Pseudo R²: 0.0012  N=50083</code></pre>
+</div>
+</div>
+<p><strong>Key takeaways matching the paper:</strong></p>
+<ul>
+<li>The simple treatment indicator is <strong>positive and highly significant</strong> (marginal effect ≈ 0.004, p &lt; 0.01), confirming the match offer increases donation probability.</li>
+<li>In the full model, neither the 2:1 nor 3:1 ratio adds any additional significant effect over the baseline 1:1 match.</li>
+<li>Threshold size and suggested ask amount also show no significant incremental effects.</li>
+</ul>
+<p>This directly replicates the paper’s central finding: <strong>any match works, but bigger match ratios don’t work better.</strong></p>
+</section>
+<section id="replicating-table-4-ols-on-dollars-given" class="level3">
+<h3 class="anchored" data-anchor-id="replicating-table-4-ols-on-dollars-given">Replicating Table 4: OLS on Dollars Given</h3>
+<div id="477c8016" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ols1 <span class="op">=</span> smf.ols(<span class="st">'amount ~ treatment'</span>, data<span class="op">=</span>df).fit(cov_type<span class="op">=</span><span class="st">'HC3'</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"OLS: Dollars Given (Unconditional) ~ Treatment"</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Treatment coefficient: </span><span class="sc">{</span>ols1<span class="sc">.</span>params[<span class="st">'treatment'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Std. Error:            (</span><span class="sc">{</span>ols1<span class="sc">.</span>bse[<span class="st">'treatment'</span>]<span class="sc">:.4f}</span><span class="ss">)"</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  p-value:               </span><span class="sc">{</span>ols1<span class="sc">.</span>pvalues[<span class="st">'treatment'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  R²: </span><span class="sc">{</span>ols1<span class="sc">.</span>rsquared<span class="sc">:.4f}</span><span class="ss">  N: </span><span class="sc">{</span><span class="bu">int</span>(ols1.nobs)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Conditional on giving</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>gave <span class="op">=</span> df[df[<span class="st">'gave'</span>]<span class="op">==</span><span class="dv">1</span>].copy()</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>ols_cond <span class="op">=</span> smf.ols(<span class="st">'amount ~ treatment'</span>, data<span class="op">=</span>gave).fit(cov_type<span class="op">=</span><span class="st">'HC3'</span>)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"OLS: Dollars Given (Conditional on Giving) ~ Treatment"</span>)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Treatment coefficient: </span><span class="sc">{</span>ols_cond<span class="sc">.</span>params[<span class="st">'treatment'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Std. Error:            (</span><span class="sc">{</span>ols_cond<span class="sc">.</span>bse[<span class="st">'treatment'</span>]<span class="sc">:.4f}</span><span class="ss">)"</span>)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  p-value:               </span><span class="sc">{</span>ols_cond<span class="sc">.</span>pvalues[<span class="st">'treatment'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  N (donors only): </span><span class="sc">{</span><span class="bu">int</span>(ols_cond.nobs)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>OLS: Dollars Given (Unconditional) ~ Treatment
+  Treatment coefficient: 0.1536
+  Std. Error:            (0.0801)
+  p-value:               0.0551
+  R²: 0.0001  N: 50083
+
+OLS: Dollars Given (Conditional on Giving) ~ Treatment
+  Treatment coefficient: -1.6684
+  Std. Error:            (2.8578)
+  p-value:               0.5594
+  N (donors only): 1034</code></pre>
+</div>
+</div>
+<p>The unconditional OLS confirms the treatment raises average giving by about $0.15 per letter sent (marginally significant at the 10% level). Importantly, among people <em>who actually gave</em>, the treatment coefficient is close to zero and insignificant — the match works mainly by <em>getting more people to donate</em>, not by making existing donors give more.</p>
+</section>
+</section>
+<section id="something-additional-the-red-state-effect" class="level2">
+<h2 class="anchored" data-anchor-id="something-additional-the-red-state-effect">Something Additional: The Red State Effect</h2>
+<p>One of the most striking findings in Karlan &amp; List (2007) is a <strong>heterogeneous treatment effect by political geography</strong>. The match offer worked powerfully in states that voted for George W. Bush in 2004 (“red states”) but had essentially no effect in states that went for John Kerry (“blue states”).</p>
+<div id="da7f716a" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>red <span class="op">=</span> df[df[<span class="st">'red0'</span>]<span class="op">==</span><span class="dv">1</span>]</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>blue <span class="op">=</span> df[df[<span class="st">'blue0'</span>]<span class="op">==</span><span class="dv">1</span>]</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Response rates by state type and treatment:"</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Blue states:"</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Control:   </span><span class="sc">{</span>blue[blue[<span class="st">'control'</span>]<span class="op">==</span><span class="dv">1</span>][<span class="st">'gave'</span>]<span class="sc">.</span>mean()<span class="sc">:.4f}</span><span class="ss"> (N=</span><span class="sc">{</span><span class="bu">len</span>(blue[blue[<span class="st">'control'</span>]<span class="op">==</span><span class="dv">1</span>])<span class="sc">}</span><span class="ss">)"</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Treatment: </span><span class="sc">{</span>blue[blue[<span class="st">'treatment'</span>]<span class="op">==</span><span class="dv">1</span>][<span class="st">'gave'</span>]<span class="sc">.</span>mean()<span class="sc">:.4f}</span><span class="ss"> (N=</span><span class="sc">{</span><span class="bu">len</span>(blue[blue[<span class="st">'treatment'</span>]<span class="op">==</span><span class="dv">1</span>])<span class="sc">}</span><span class="ss">)"</span>)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Red states:"</span>)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Control:   </span><span class="sc">{</span>red[red[<span class="st">'control'</span>]<span class="op">==</span><span class="dv">1</span>][<span class="st">'gave'</span>]<span class="sc">.</span>mean()<span class="sc">:.4f}</span><span class="ss"> (N=</span><span class="sc">{</span><span class="bu">len</span>(red[red[<span class="st">'control'</span>]<span class="op">==</span><span class="dv">1</span>])<span class="sc">}</span><span class="ss">)"</span>)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Treatment: </span><span class="sc">{</span>red[red[<span class="st">'treatment'</span>]<span class="op">==</span><span class="dv">1</span>][<span class="st">'gave'</span>]<span class="sc">.</span>mean()<span class="sc">:.4f}</span><span class="ss"> (N=</span><span class="sc">{</span><span class="bu">len</span>(red[red[<span class="st">'treatment'</span>]<span class="op">==</span><span class="dv">1</span>])<span class="sc">}</span><span class="ss">)"</span>)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Probit by subgroup</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>p_red <span class="op">=</span> smf.probit(<span class="st">'gave ~ treatment'</span>, data<span class="op">=</span>red).fit(disp<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>me_red <span class="op">=</span> p_red.get_margeff()</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>p_blue <span class="op">=</span> smf.probit(<span class="st">'gave ~ treatment'</span>, data<span class="op">=</span>blue).fit(disp<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>me_blue <span class="op">=</span> p_blue.get_margeff()</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Probit marginal effects:"</span>)</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Red state treatment effect:  </span><span class="sc">{</span>me_red<span class="sc">.</span>margeff[<span class="dv">0</span>]<span class="sc">:.4f}</span><span class="ss"> (SE=</span><span class="sc">{</span>me_red<span class="sc">.</span>margeff_se[<span class="dv">0</span>]<span class="sc">:.4f}</span><span class="ss">), p=</span><span class="sc">{</span>me_red<span class="sc">.</span>pvalues[<span class="dv">0</span>]<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Blue state treatment effect: </span><span class="sc">{</span>me_blue<span class="sc">.</span>margeff[<span class="dv">0</span>]<span class="sc">:.4f}</span><span class="ss"> (SE=</span><span class="sc">{</span>me_blue<span class="sc">.</span>margeff_se[<span class="dv">0</span>]<span class="sc">:.4f}</span><span class="ss">), p=</span><span class="sc">{</span>me_blue<span class="sc">.</span>pvalues[<span class="dv">0</span>]<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Full model with interaction</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>p_interact <span class="op">=</span> smf.probit(<span class="st">'gave ~ treatment + red0 + treatment:red0'</span>, data<span class="op">=</span>df).fit(disp<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Interaction model (full sample):"</span>)</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(p_interact.summary().tables[<span class="dv">1</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Response rates by state type and treatment:
+
+Blue states:
+  Control:   0.0200 (N=10029)
+  Treatment: 0.0211 (N=19777)
+
+Red states:
+  Control:   0.0146 (N=6648)
+  Treatment: 0.0234 (N=13594)
+
+Probit marginal effects:
+  Red state treatment effect:  0.0095 (SE=0.0023), p=0.0000
+  Blue state treatment effect: 0.0011 (SE=0.0018), p=0.5500
+
+Interaction model (full sample):
+==================================================================================
+                     coef    std err          z      P&gt;|z|      [0.025      0.975]
+----------------------------------------------------------------------------------
+Intercept         -2.0529      0.029    -71.154      0.000      -2.109      -1.996
+treatment          0.0210      0.035      0.598      0.550      -0.048       0.090
+red0              -0.1281      0.049     -2.608      0.009      -0.224      -0.032
+treatment:red0     0.1717      0.058      2.958      0.003       0.058       0.286
+==================================================================================</code></pre>
+</div>
+</div>
+<p>The table below visually summarizes this pattern — and I present it graphically to make the contrast vivid:</p>
+<div id="d82f0300" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.patches <span class="im">as</span> mpatches</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">11</span>, <span class="fl">4.5</span>))</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>fig.suptitle(<span class="st">"Karlan &amp; List (2007) — Key Results"</span>, fontsize<span class="op">=</span><span class="dv">13</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>, y<span class="op">=</span><span class="fl">1.02</span>)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co"># --- LEFT: Response rates by match ratio ---</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>ax1 <span class="op">=</span> axes[<span class="dv">0</span>]</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> [<span class="st">'Control</span><span class="ch">\n</span><span class="st">(no match)'</span>, <span class="st">'1:1</span><span class="ch">\n</span><span class="st">Match'</span>, <span class="st">'2:1</span><span class="ch">\n</span><span class="st">Match'</span>, <span class="st">'3:1</span><span class="ch">\n</span><span class="st">Match'</span>]</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>rr <span class="op">=</span> [</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    df[df[<span class="st">'control'</span>]<span class="op">==</span><span class="dv">1</span>][<span class="st">'gave'</span>].mean() <span class="op">*</span> <span class="dv">100</span>,</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    df[df[<span class="st">'ratio'</span>]<span class="op">==</span><span class="dv">1</span>][<span class="st">'gave'</span>].mean() <span class="op">*</span> <span class="dv">100</span>,</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    df[df[<span class="st">'ratio'</span>]<span class="op">==</span><span class="dv">2</span>][<span class="st">'gave'</span>].mean() <span class="op">*</span> <span class="dv">100</span>,</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    df[df[<span class="st">'ratio'</span>]<span class="op">==</span><span class="dv">3</span>][<span class="st">'gave'</span>].mean() <span class="op">*</span> <span class="dv">100</span>,</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> [<span class="st">'#9E9E9E'</span>, <span class="st">'#1565C0'</span>, <span class="st">'#1976D2'</span>, <span class="st">'#42A5F5'</span>]</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>bars <span class="op">=</span> ax1.bar(labels, rr, color<span class="op">=</span>colors, edgecolor<span class="op">=</span><span class="st">'white'</span>, width<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'Response Rate (%)'</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">'Bigger Match Ratios Add Nothing</span><span class="ch">\n</span><span class="st">(any match helps, 2:1 and 3:1 don</span><span class="ch">\'</span><span class="st">t help more)'</span>, fontsize<span class="op">=</span><span class="dv">10</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>ax1.set_ylim(<span class="dv">0</span>, <span class="fl">3.2</span>)</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> b, v <span class="kw">in</span> <span class="bu">zip</span>(bars, rr):</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>    ax1.text(b.get_x() <span class="op">+</span> b.get_width()<span class="op">/</span><span class="dv">2</span>, v <span class="op">+</span> <span class="fl">0.06</span>, <span class="ss">f'</span><span class="sc">{</span>v<span class="sc">:.2f}</span><span class="ss">%'</span>,</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>             ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'bottom'</span>, fontsize<span class="op">=</span><span class="dv">10</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>ax1.axhline(rr[<span class="dv">0</span>], color<span class="op">=</span><span class="st">'#9E9E9E'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, linewidth<span class="op">=</span><span class="dv">1</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>ax1.set_facecolor(<span class="st">'#f8f8f8'</span>)</span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>ax1.spines[<span class="st">'top'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>ax1.spines[<span class="st">'right'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a><span class="co"># --- RIGHT: Red vs Blue state ---</span></span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> axes[<span class="dv">1</span>]</span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>cats <span class="op">=</span> [<span class="st">'Blue States</span><span class="ch">\n</span><span class="st">(Kerry 2004)'</span>, <span class="st">'Red States</span><span class="ch">\n</span><span class="st">(Bush 2004)'</span>]</span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>ctrl_r <span class="op">=</span> [blue[blue[<span class="st">'control'</span>]<span class="op">==</span><span class="dv">1</span>][<span class="st">'gave'</span>].mean()<span class="op">*</span><span class="dv">100</span>,</span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>           red[red[<span class="st">'control'</span>]<span class="op">==</span><span class="dv">1</span>][<span class="st">'gave'</span>].mean()<span class="op">*</span><span class="dv">100</span>]</span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a>treat_r <span class="op">=</span> [blue[blue[<span class="st">'treatment'</span>]<span class="op">==</span><span class="dv">1</span>][<span class="st">'gave'</span>].mean()<span class="op">*</span><span class="dv">100</span>,</span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>            red[red[<span class="st">'treatment'</span>]<span class="op">==</span><span class="dv">1</span>][<span class="st">'gave'</span>].mean()<span class="op">*</span><span class="dv">100</span>]</span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">2</span>)</span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> <span class="fl">0.35</span></span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a>b1 <span class="op">=</span> ax2.bar(x <span class="op">-</span> w<span class="op">/</span><span class="dv">2</span>, ctrl_r, w, label<span class="op">=</span><span class="st">'Control (no match)'</span>, color<span class="op">=</span><span class="st">'#9E9E9E'</span>, edgecolor<span class="op">=</span><span class="st">'white'</span>)</span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a>b2 <span class="op">=</span> ax2.bar(x <span class="op">+</span> w<span class="op">/</span><span class="dv">2</span>, treat_r, w, label<span class="op">=</span><span class="st">'Treatment (match)'</span>, color<span class="op">=</span><span class="st">'#1565C0'</span>, edgecolor<span class="op">=</span><span class="st">'white'</span>)</span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">'Response Rate (%)'</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'Match Effect Is Driven by Red State Donors</span><span class="ch">\n</span><span class="st">(no effect in blue states)'</span>, fontsize<span class="op">=</span><span class="dv">10</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a>ax2.set_xticks(x)</span>
+<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a>ax2.set_xticklabels(cats)</span>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a>ax2.set_ylim(<span class="dv">0</span>, <span class="fl">3.5</span>)</span>
+<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a>ax2.legend(fontsize<span class="op">=</span><span class="dv">9</span>, loc<span class="op">=</span><span class="st">'upper left'</span>)</span>
+<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> b, v <span class="kw">in</span> <span class="bu">zip</span>(<span class="bu">list</span>(b1)<span class="op">+</span><span class="bu">list</span>(b2), ctrl_r<span class="op">+</span>treat_r):</span>
+<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a>    ax2.text(b.get_x() <span class="op">+</span> b.get_width()<span class="op">/</span><span class="dv">2</span>, v <span class="op">+</span> <span class="fl">0.07</span>, <span class="ss">f'</span><span class="sc">{</span>v<span class="sc">:.2f}</span><span class="ss">%'</span>,</span>
+<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a>             ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'bottom'</span>, fontsize<span class="op">=</span><span class="dv">9</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a>ax2.text(<span class="dv">0</span>, <span class="fl">2.85</span>, <span class="st">'n.s.'</span>, ha<span class="op">=</span><span class="st">'center'</span>, fontsize<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">'#888888'</span>)</span>
+<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a>ax2.text(<span class="dv">1</span>, <span class="fl">3.15</span>, <span class="st">'*** p&lt;0.001'</span>, ha<span class="op">=</span><span class="st">'center'</span>, fontsize<span class="op">=</span><span class="dv">9</span>, color<span class="op">=</span><span class="st">'darkgreen'</span>)</span>
+<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a>ax2.set_facecolor(<span class="st">'#f8f8f8'</span>)</span>
+<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a>ax2.spines[<span class="st">'top'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a>ax2.spines[<span class="st">'right'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'karlan_list_figures.png'</span>, dpi<span class="op">=</span><span class="dv">150</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
+<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Figure saved."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-7-output-1.png" width="1045" height="445" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Figure saved.</code></pre>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="karlan_list_figures.png" class="img-fluid figure-img"></p>
+<figcaption>Main results from the replication</figcaption>
+</figure>
+</div>
+<p>Several features of this finding are worth highlighting:</p>
+<ol type="1">
+<li><p><strong>The baseline is lower in red states.</strong> Under the control condition, red-state donors gave at a rate of only 1.46% vs.&nbsp;2.00% for blue-state donors — consistent with the fact that this is a liberal organization soliciting in conservative territory.</p></li>
+<li><p><strong>The match fully closes the gap.</strong> After the match offer, red-state response rates jump to 2.34%, <em>exceeding</em> the blue-state treatment rate of 2.11%. The match essentially neutralizes the baseline political disadvantage.</p></li>
+<li><p><strong>The interaction is robust.</strong> The authors show in Table 6 (which I partially replicate above with the interaction model) that this red/blue state difference survives controlling for income, education, race, age, household size, and prior giving — it’s not just demographic confounding.</p></li>
+</ol>
+<p><strong>Why might this be?</strong> The authors speculate that donors in red states — who are a political <em>minority</em> relative to their local environment — may feel a stronger “social identity” pull when they see that a fellow member is matching their gift. The matching offer functions as a credibility and urgency signal that resonates more powerfully when being part of this cause feels more salient or countercultural. This connects to broader literature on conditional cooperation and social norms in public goods provision.</p>
+<section id="price-elasticity" class="level3">
+<h3 class="anchored" data-anchor-id="price-elasticity">Price Elasticity</h3>
+<div id="102c60c3" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>ctrl_rev <span class="op">=</span> df[df[<span class="st">'control'</span>]<span class="op">==</span><span class="dv">1</span>][<span class="st">'amount'</span>].mean()</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>treat_rev <span class="op">=</span> df[df[<span class="st">'treatment'</span>]<span class="op">==</span><span class="dv">1</span>][<span class="st">'amount'</span>].mean()</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>pct_rev <span class="op">=</span> (treat_rev <span class="op">-</span> ctrl_rev) <span class="op">/</span> ctrl_rev</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>pct_price <span class="op">=</span> (<span class="fl">0.36</span> <span class="op">-</span> <span class="fl">1.00</span>) <span class="op">/</span> <span class="fl">1.00</span>  <span class="co"># price of $1 of public good drops from $1 to $0.36</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>raw_elast <span class="op">=</span> pct_rev <span class="op">/</span> pct_price</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>tax_elast <span class="op">=</span> raw_elast <span class="op">*</span> <span class="fl">0.75</span>   <span class="co"># adjust for 25% marginal tax rate</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Revenue per letter — Control: $</span><span class="sc">{</span>ctrl_rev<span class="sc">:.4f}</span><span class="ss">, Treatment: $</span><span class="sc">{</span>treat_rev<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"% change in revenue: </span><span class="sc">{</span>pct_rev<span class="op">*</span><span class="dv">100</span><span class="sc">:.1f}</span><span class="ss">%"</span>)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"% change in price:   </span><span class="sc">{</span>pct_price<span class="op">*</span><span class="dv">100</span><span class="sc">:.1f}</span><span class="ss">%"</span>)</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Raw price elasticity:          </span><span class="sc">{</span>raw_elast<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"After 25% tax rate adjustment: </span><span class="sc">{</span>tax_elast<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Paper reports: -0.225 — ours:"</span>, <span class="bu">round</span>(tax_elast, <span class="dv">3</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Revenue per letter — Control: $0.8133, Treatment: $0.9669
+% change in revenue: 18.9%
+% change in price:   -64.0%
+Raw price elasticity:          -0.295
+After 25% tax rate adjustment: -0.221
+
+Paper reports: -0.225 — ours: -0.221</code></pre>
+</div>
+</div>
+<p>The implied price elasticity of giving is approximately <strong>–0.22</strong>, meaning a 1% drop in the price of giving leads to a 0.22% increase in donations. This is at the lower end of the range of estimates from the tax-deduction literature, suggesting that match-based price incentives may be somewhat weaker than tax-based incentives — though the contexts differ.</p>
+<hr>
+<p><em>This replication uses the publicly available data from Karlan &amp; List (2007), “Does Price Matter in Charitable Giving? Evidence from a Large-Scale Natural Field Experiment,” American Economic Review 97(5): 1774–1793.</em></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
