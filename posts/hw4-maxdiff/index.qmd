@@ -2,7 +2,7 @@
 title: "MaxDiff Analysis of MSBA Class Preferences"
 subtitle: "Counts, MLE, and Bayesian estimation of the MNL model"
 author: "Melody Wu"
-date: today
+date: 2026-05-28
 categories:
   - R
   - MaxDiff
@@ -26,7 +26,7 @@ execute:
 title: "MaxDiff Analysis of MSBA Class Preferences"
 subtitle: "Counts, MLE, and Bayesian estimation of the MNL model"
 author: "Melody Wu"
-date: today
+date: 2026-05-28
 format:
   html:
     toc: true
