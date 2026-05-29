@@ -387,7 +387,7 @@ L(\lambda \mid \mathbf{Y}) = \prod_{i=1}^{n} \frac{e^{-\lambda}\,\lambda^{Y_i}}{
 </section>
 <section id="coding-the-log-likelihood" class="level3">
 <h3 class="anchored" data-anchor-id="coding-the-log-likelihood">Coding the Log-Likelihood</h3>
-<div id="54af227a" class="cell" data-execution_count="6">
+<div id="c1959edb" class="cell" data-execution_count="6">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> poisson_loglikelihood(lam, Y):</span>
@@ -429,7 +429,7 @@ Figure&nbsp;4: Poisson log-likelihood as a function of λ. The peak coincides wi
 </section>
 <section id="numerical-mle-with-scipy.optimize" class="level3">
 <h3 class="anchored" data-anchor-id="numerical-mle-with-scipy.optimize">Numerical MLE with <code>scipy.optimize</code></h3>
-<div id="11863de8" class="cell" data-execution_count="8">
+<div id="e8f286e5" class="cell" data-execution_count="8">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>result_scalar <span class="op">=</span> optimize.minimize_scalar(</span>
@@ -465,7 +465,7 @@ Y_i \sim \text{Poisson}(\lambda_i), \qquad \lambda_i = \exp\!\left(X_i^\top \bet
 </section>
 <section id="updated-log-likelihood" class="level3">
 <h3 class="anchored" data-anchor-id="updated-log-likelihood">Updated Log-Likelihood</h3>
-<div id="be877ef3" class="cell" data-execution_count="9">
+<div id="f740cf8b" class="cell" data-execution_count="9">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> poisson_regression_loglikelihood(beta, Y, X):</span>
@@ -482,7 +482,7 @@ Y_i \sim \text{Poisson}(\lambda_i), \qquad \lambda_i = \exp\!\left(X_i^\top \bet
 </section>
 <section id="constructing-the-design-matrix" class="level3">
 <h3 class="anchored" data-anchor-id="constructing-the-design-matrix">Constructing the Design Matrix</h3>
-<div id="b41c71b6" class="cell" data-execution_count="10">
+<div id="1e11f3ac" class="cell" data-execution_count="10">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Reference region: Northeast (largest group, dropped to avoid collinearity)</span></span>
@@ -514,7 +514,7 @@ Columns: ['Intercept', 'age', 'age²', 'Midwest', 'Northwest', 'South', 'Southwe
 </section>
 <section id="finding-the-mle-with-scipy.optimize" class="level3">
 <h3 class="anchored" data-anchor-id="finding-the-mle-with-scipy.optimize">Finding the MLE with <code>scipy.optimize</code></h3>
-<div id="2918f27f" class="cell" data-execution_count="11">
+<div id="684f4ee9" class="cell" data-execution_count="11">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>neg_ll <span class="op">=</span> <span class="kw">lambda</span> beta: <span class="op">-</span>poisson_regression_loglikelihood(beta, Y, X)</span>
@@ -542,7 +542,7 @@ iscustomer coefficient: 0.2076</code></pre>
 \text{Var}(\hat\beta) \approx \mathcal{I}(\hat\beta)^{-1} = \left[-\nabla^2\ell(\hat\beta)\right]^{-1}
 \]</span></p>
 <p>Standard errors are the square roots of the diagonal elements.</p>
-<div id="abf80f3f" class="cell" data-execution_count="12">
+<div id="8945f51c" class="cell" data-execution_count="12">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numdifftools <span class="im">as</span> nd</span>
@@ -557,7 +557,7 @@ iscustomer coefficient: 0.2076</code></pre>
 <section id="comparison-with-statsmodels.glm" class="level3">
 <h3 class="anchored" data-anchor-id="comparison-with-statsmodels.glm">Comparison with <code>statsmodels.GLM</code></h3>
 <p>As a gold-standard check, we fit the same model using <code>statsmodels.GLM</code> with the Poisson family. GLM software uses the <strong>analytic</strong> Fisher information (the expected Hessian), which is numerically more stable than the finite-difference approximation above — hence the slight differences in standard errors, especially for highly correlated predictors like age and age².</p>
-<div id="982e64f0" class="cell" data-execution_count="13">
+<div id="709a5c18" class="cell" data-execution_count="13">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Xdf <span class="op">=</span> pd.DataFrame(X, columns<span class="op">=</span>col_names)</span>
@@ -572,55 +572,55 @@ Table&nbsp;1: Poisson regression coefficient estimates. Standard errors and p-va
 </figcaption>
 <div aria-describedby="tbl-coefs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="14">
-<div id="mrukbrvkdx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="htchcdlhmq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>
-#mrukbrvkdx table {
+#htchcdlhmq table {
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
         }
 
-#mrukbrvkdx thead, tbody, tfoot, tr, td, th { border-style: none; }
+#htchcdlhmq thead, tbody, tfoot, tr, td, th { border-style: none; }
  tr { background-color: transparent; }
-#mrukbrvkdx p { margin: 0; padding: 0; }
- #mrukbrvkdx .gt_table { display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3; }
- #mrukbrvkdx .gt_caption { padding-top: 4px; padding-bottom: 4px; }
- #mrukbrvkdx .gt_title { color: #333333; font-size: 125%; font-weight: initial; padding-top: 4px; padding-bottom: 4px; padding-left: 5px; padding-right: 5px; border-bottom-color: #FFFFFF; border-bottom-width: 0; }
- #mrukbrvkdx .gt_subtitle { color: #333333; font-size: 85%; font-weight: initial; padding-top: 3px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; border-top-color: #FFFFFF; border-top-width: 0; }
- #mrukbrvkdx .gt_heading { background-color: #FFFFFF; text-align: center; border-bottom-color: #FFFFFF; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; }
- #mrukbrvkdx .gt_bottom_border { border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; }
- #mrukbrvkdx .gt_col_headings { border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; }
- #mrukbrvkdx .gt_col_heading { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; }
- #mrukbrvkdx .gt_column_spanner_outer { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: normal; text-transform: inherit; padding-top: 0; padding-bottom: 0; padding-left: 4px; padding-right: 4px; }
- #mrukbrvkdx .gt_column_spanner_outer:first-child { padding-left: 0; }
- #mrukbrvkdx .gt_column_spanner_outer:last-child { padding-right: 0; }
- #mrukbrvkdx .gt_column_spanner { border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 5px; overflow-x: hidden; display: inline-block; width: 100%; }
- #mrukbrvkdx .gt_spanner_row { border-bottom-style: hidden; }
- #mrukbrvkdx .gt_group_heading { padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; text-align: left; }
- #mrukbrvkdx .gt_empty_group_heading { padding: 0.5px; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; vertical-align: middle; }
- #mrukbrvkdx .gt_from_md> :first-child { margin-top: 0; }
- #mrukbrvkdx .gt_from_md> :last-child { margin-bottom: 0; }
- #mrukbrvkdx .gt_row { padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; }
- #mrukbrvkdx .gt_stub { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-right-style: solid; border-right-width: 2px; border-right-color: #D3D3D3; padding-left: 5px; padding-right: 5px; }
- #mrukbrvkdx .gt_stub_row_group { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-right-style: solid; border-right-width: 2px; border-right-color: #D3D3D3; padding-left: 5px; padding-right: 5px; vertical-align: top; }
- #mrukbrvkdx .gt_row_group_first td { border-top-width: 2px; }
- #mrukbrvkdx .gt_row_group_first th { border-top-width: 2px; }
- #mrukbrvkdx .gt_striped { color: #333333; background-color: #F4F4F4; }
- #mrukbrvkdx .gt_table_body { border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; }
- #mrukbrvkdx .gt_grand_summary_row { color: #333333; background-color: #FFFFFF; text-transform: inherit; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; }
- #mrukbrvkdx .gt_first_grand_summary_row_bottom { border-top-style: double; border-top-width: 6px; border-top-color: #D3D3D3; }
- #mrukbrvkdx .gt_last_grand_summary_row_top { border-bottom-style: double; border-bottom-width: 6px; border-bottom-color: #D3D3D3; }
- #mrukbrvkdx .gt_sourcenotes { color: #333333; background-color: #FFFFFF; border-bottom-style: none; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; }
- #mrukbrvkdx .gt_sourcenote { font-size: 90%; padding-top: 4px; padding-bottom: 4px; padding-left: 5px; padding-right: 5px; text-align: left; }
- #mrukbrvkdx .gt_left { text-align: left; }
- #mrukbrvkdx .gt_center { text-align: center; }
- #mrukbrvkdx .gt_right { text-align: right; font-variant-numeric: tabular-nums; }
- #mrukbrvkdx .gt_font_normal { font-weight: normal; }
- #mrukbrvkdx .gt_font_bold { font-weight: bold; }
- #mrukbrvkdx .gt_font_italic { font-style: italic; }
- #mrukbrvkdx .gt_super { font-size: 65%; }
- #mrukbrvkdx .gt_footnote_marks { font-size: 75%; vertical-align: 0.4em; position: initial; }
- #mrukbrvkdx .gt_asterisk { font-size: 100%; vertical-align: 0; }
+#htchcdlhmq p { margin: 0; padding: 0; }
+ #htchcdlhmq .gt_table { display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3; }
+ #htchcdlhmq .gt_caption { padding-top: 4px; padding-bottom: 4px; }
+ #htchcdlhmq .gt_title { color: #333333; font-size: 125%; font-weight: initial; padding-top: 4px; padding-bottom: 4px; padding-left: 5px; padding-right: 5px; border-bottom-color: #FFFFFF; border-bottom-width: 0; }
+ #htchcdlhmq .gt_subtitle { color: #333333; font-size: 85%; font-weight: initial; padding-top: 3px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; border-top-color: #FFFFFF; border-top-width: 0; }
+ #htchcdlhmq .gt_heading { background-color: #FFFFFF; text-align: center; border-bottom-color: #FFFFFF; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; }
+ #htchcdlhmq .gt_bottom_border { border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; }
+ #htchcdlhmq .gt_col_headings { border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; }
+ #htchcdlhmq .gt_col_heading { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; }
+ #htchcdlhmq .gt_column_spanner_outer { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: normal; text-transform: inherit; padding-top: 0; padding-bottom: 0; padding-left: 4px; padding-right: 4px; }
+ #htchcdlhmq .gt_column_spanner_outer:first-child { padding-left: 0; }
+ #htchcdlhmq .gt_column_spanner_outer:last-child { padding-right: 0; }
+ #htchcdlhmq .gt_column_spanner { border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 5px; overflow-x: hidden; display: inline-block; width: 100%; }
+ #htchcdlhmq .gt_spanner_row { border-bottom-style: hidden; }
+ #htchcdlhmq .gt_group_heading { padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; text-align: left; }
+ #htchcdlhmq .gt_empty_group_heading { padding: 0.5px; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; vertical-align: middle; }
+ #htchcdlhmq .gt_from_md> :first-child { margin-top: 0; }
+ #htchcdlhmq .gt_from_md> :last-child { margin-bottom: 0; }
+ #htchcdlhmq .gt_row { padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; }
+ #htchcdlhmq .gt_stub { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-right-style: solid; border-right-width: 2px; border-right-color: #D3D3D3; padding-left: 5px; padding-right: 5px; }
+ #htchcdlhmq .gt_stub_row_group { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-right-style: solid; border-right-width: 2px; border-right-color: #D3D3D3; padding-left: 5px; padding-right: 5px; vertical-align: top; }
+ #htchcdlhmq .gt_row_group_first td { border-top-width: 2px; }
+ #htchcdlhmq .gt_row_group_first th { border-top-width: 2px; }
+ #htchcdlhmq .gt_striped { color: #333333; background-color: #F4F4F4; }
+ #htchcdlhmq .gt_table_body { border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; }
+ #htchcdlhmq .gt_grand_summary_row { color: #333333; background-color: #FFFFFF; text-transform: inherit; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; }
+ #htchcdlhmq .gt_first_grand_summary_row_bottom { border-top-style: double; border-top-width: 6px; border-top-color: #D3D3D3; }
+ #htchcdlhmq .gt_last_grand_summary_row_top { border-bottom-style: double; border-bottom-width: 6px; border-bottom-color: #D3D3D3; }
+ #htchcdlhmq .gt_sourcenotes { color: #333333; background-color: #FFFFFF; border-bottom-style: none; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; }
+ #htchcdlhmq .gt_sourcenote { font-size: 90%; padding-top: 4px; padding-bottom: 4px; padding-left: 5px; padding-right: 5px; text-align: left; }
+ #htchcdlhmq .gt_left { text-align: left; }
+ #htchcdlhmq .gt_center { text-align: center; }
+ #htchcdlhmq .gt_right { text-align: right; font-variant-numeric: tabular-nums; }
+ #htchcdlhmq .gt_font_normal { font-weight: normal; }
+ #htchcdlhmq .gt_font_bold { font-weight: bold; }
+ #htchcdlhmq .gt_font_italic { font-style: italic; }
+ #htchcdlhmq .gt_super { font-size: 65%; }
+ #htchcdlhmq .gt_footnote_marks { font-size: 75%; vertical-align: 0.4em; position: initial; }
+ #htchcdlhmq .gt_asterisk { font-size: 100%; vertical-align: 0; }
  
 </style>
 
@@ -733,7 +733,7 @@ Table&nbsp;1: Poisson regression coefficient estimates. Standard errors and p-va
 <section id="counterfactual-prediction" class="level3">
 <h3 class="anchored" data-anchor-id="counterfactual-prediction">Counterfactual Prediction</h3>
 <p>The 23% rate ratio is informative but abstract. To translate it into a concrete, policy-relevant number — <em>how many additional patents does Blueprinty actually bring in?</em> — we construct two counterfactual datasets that differ only in the <code>iscustomer</code> column:</p>
-<div id="08aee2a0" class="cell" data-execution_count="15">
+<div id="ccd94b63" class="cell" data-execution_count="15">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Counterfactual 0: every firm is a non-customer</span></span>
@@ -779,7 +779,7 @@ Figure&nbsp;5: Per-firm predicted patent counts under the two counterfactual sce
 </section>
 <section id="the-bottom-line" class="level3">
 <h3 class="anchored" data-anchor-id="the-bottom-line">The Bottom Line</h3>
-<div id="99f87159" class="cell" data-execution_count="17">
+<div id="68be96ff" class="cell" data-execution_count="17">
 <div class="cell-output cell-output-stdout">
 <pre><code>
   Estimated average effect of Blueprinty: +0.79 patents per firm (over 5 years)
