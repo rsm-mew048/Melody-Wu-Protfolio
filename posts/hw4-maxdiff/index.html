@@ -8,6 +8,7 @@
 
 <meta name="author" content="Melody Wu">
 <meta name="dcterms.date" content="2026-05-28">
+<meta name="description" content="Best-Worst Scaling survey analysis of MSBA class preferences using Counts, MLE, and Bayesian estimation of the MNL model.">
 
 <title>MaxDiff Analysis of MSBA Class Preferences – Melody Wu</title>
 <style>
@@ -210,8 +211,18 @@ window.Quarto = {
 <div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">MaxDiff Analysis of MSBA Class Preferences</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 <p class="subtitle lead">Counts, MLE, and Bayesian estimation of the MNL model</p>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">MaxDiff</div>
+    <div class="quarto-category">Bayesian</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Best-Worst Scaling survey analysis of MSBA class preferences using Counts, MLE, and Bayesian estimation of the MNL model.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -238,6 +249,7 @@ window.Quarto = {
 </header>
 
 
+<p>categories: - R - MaxDiff - Bayesian description: “Best-Worst Scaling survey analysis of MSBA class preferences using Counts, MLE, and Bayesian estimation of the MNL model.” — title: “MaxDiff Analysis of MSBA Class Preferences” subtitle: “Counts, MLE, and Bayesian estimation of the MNL model” author: “Melody Wu” date: today format: html: toc: true toc-depth: 3 toc-title: “Contents” theme: cosmo highlight-style: github code-fold: show code-tools: true fig-align: center df-print: paged execute: warning: false message: false categories: - R - MaxDiff - Bayesian description: “Best-Worst Scaling survey analysis of MSBA class preferences using Counts, MLE, and Bayesian estimation of the MNL model.” —</p>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>In this assignment, I analyze how MSBA students at UC San Diego Rady School of Management rank their 10 core classes using a <strong>MaxDiff</strong> (Best-Worst Scaling) survey.</p>
@@ -252,7 +264,7 @@ Humans are much better at comparing and ranking than at using abstract numeric s
 <li><strong>MNL via Bayesian (MCMC)</strong> — same model but with full posterior distributions and credible intervals</li>
 </ol>
 <p>All three should agree on the broad ranking of classes. The main differences are in how they quantify uncertainty and handle the underlying choice process.</p>
-<hr>
+<p>categories: - R - MaxDiff - Bayesian description: “Best-Worst Scaling survey analysis of MSBA class preferences using Counts, MLE, and Bayesian estimation of the MNL model.” —</p>
 </section>
 <section id="the-data" class="level2">
 <h2 class="anchored" data-anchor-id="the-data">The Data</h2>
@@ -434,7 +446,7 @@ Humans are much better at comparing and ranking than at using abstract numeric s
 </div>
 </div>
 <p>The dataset has <strong>85 respondents</strong>, each completing <strong>15 tasks</strong>. Every task shows 4 of the 10 MSBA classes. The sanity check passes, and exposure counts are roughly balanced — as expected from a balanced MaxDiff design.</p>
-<hr>
+<p>categories: - R - MaxDiff - Bayesian description: “Best-Worst Scaling survey analysis of MSBA class preferences using Counts, MLE, and Bayesian estimation of the MNL model.” —</p>
 </section>
 <section id="counts-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="counts-analysis">Counts Analysis</h2>
@@ -665,7 +677,7 @@ Humans are much better at comparing and ranking than at using abstract numeric s
 </div>
 </div>
 <p><strong>Observations:</strong> Customer Analytics and Marketing Analytics score highest — students strongly prefer these when shown. BI Systems and Capstone score lowest, with clearly negative scores. The MLE analysis below tests whether these patterns hold up in a formal choice model.</p>
-<hr>
+<p>categories: - R - MaxDiff - Bayesian description: “Best-Worst Scaling survey analysis of MSBA class preferences using Counts, MLE, and Bayesian estimation of the MNL model.” —</p>
 </section>
 <section id="from-maxdiff-data-to-mnl-choices" class="level2">
 <h2 class="anchored" data-anchor-id="from-maxdiff-data-to-mnl-choices">From MaxDiff Data to MNL Choices</h2>
@@ -694,7 +706,7 @@ Humans are much better at comparing and ranking than at using abstract numeric s
 <pre><code>Total tasks: 680 </code></pre>
 </div>
 </div>
-<hr>
+<p>categories: - R - MaxDiff - Bayesian description: “Best-Worst Scaling survey analysis of MSBA class preferences using Counts, MLE, and Bayesian estimation of the MNL model.” —</p>
 </section>
 <section id="mnl-via-maximum-likelihood" class="level2">
 <h2 class="anchored" data-anchor-id="mnl-via-maximum-likelihood">MNL via Maximum Likelihood</h2>
@@ -871,7 +883,7 @@ Humans are much better at comparing and ranking than at using abstract numeric s
 </div>
 </div>
 <p><strong>Comparison to Counts:</strong> The MLE ranking largely matches the counts ranking. The key advantage of MNL is that every item <em>shown but not chosen</em> contributes information. Preference shares also have a clean interpretation: if all 10 classes appeared on a single screen, what fraction of choices would each receive?</p>
-<hr>
+<p>categories: - R - MaxDiff - Bayesian description: “Best-Worst Scaling survey analysis of MSBA class preferences using Counts, MLE, and Bayesian estimation of the MNL model.” —</p>
 </section>
 <section id="mnl-via-bayesian-estimation" class="level2">
 <h2 class="anchored" data-anchor-id="mnl-via-bayesian-estimation">MNL via Bayesian Estimation</h2>
@@ -1122,7 +1134,7 @@ Humans are much better at comparing and ranking than at using abstract numeric s
 </div>
 </div>
 <p><strong>Comparison to MLE:</strong> Posterior means are very close to MLE point estimates, as expected when the prior is weakly informative. The Bayesian approach adds credible intervals on the <em>shares</em> for free — just apply softmax to each MCMC draw. Doing this from MLE would require the delta method.</p>
-<hr>
+<p>categories: - R - MaxDiff - Bayesian description: “Best-Worst Scaling survey analysis of MSBA class preferences using Counts, MLE, and Bayesian estimation of the MNL model.” —</p>
 </section>
 <section id="comparing-the-three-methods" class="level2">
 <h2 class="anchored" data-anchor-id="comparing-the-three-methods">Comparing the Three Methods</h2>
@@ -1313,7 +1325,7 @@ Humans are much better at comparing and ranking than at using abstract numeric s
 <p><strong>Where they disagree:</strong> Middle-ranked classes (SQL, Large Data, Biz Analytics) shift slightly across methods because their utilities are similar — small modeling differences can flip their relative order.</p>
 <p><strong>What MNL adds over Counts:</strong> Every item shown but not chosen contributes information. Counts only track the items that were actually selected, making MNL more statistically efficient.</p>
 <p><strong>What Bayes adds over MLE:</strong> Credible intervals on any derived quantity (like preference shares) come for free from the posterior draws. MLE would require the delta method to get the same intervals.</p>
-<hr>
+<p>categories: - R - MaxDiff - Bayesian description: “Best-Worst Scaling survey analysis of MSBA class preferences using Counts, MLE, and Bayesian estimation of the MNL model.” —</p>
 </section>
 <section id="discussion" class="level2">
 <h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
@@ -1805,521 +1817,566 @@ Humans are much better at comparing and ranking than at using abstract numeric s
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "MaxDiff Analysis of MSBA Class Preferences"</span></span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Counts, MLE, and Bayesian estimation of the MNL model"</span></span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Melody Wu"</span></span>
-<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> today</span></span>
-<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
-<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-depth: 3</span></span>
-<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-title: "Contents"</span></span>
-<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: cosmo</span></span>
-<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a><span class="co">    highlight-style: github</span></span>
-<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: show</span></span>
-<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
-<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a><span class="co">    fig-align: center</span></span>
-<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a><span class="co">    df-print: paged</span></span>
-<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a><span class="an">execute:</span></span>
-<span id="cb32-18"><a href="#cb32-18" aria-hidden="true" tabindex="-1"></a><span class="co">  warning: false</span></span>
-<span id="cb32-19"><a href="#cb32-19" aria-hidden="true" tabindex="-1"></a><span class="co">  message: false</span></span>
-<span id="cb32-20"><a href="#cb32-20" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb32-21"><a href="#cb32-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-22"><a href="#cb32-22" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introduction</span></span>
-<span id="cb32-23"><a href="#cb32-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-24"><a href="#cb32-24" aria-hidden="true" tabindex="-1"></a>In this assignment, I analyze how MSBA students at UC San Diego Rady School of Management rank their 10 core classes using a **MaxDiff** (Best-Worst Scaling) survey.</span>
-<span id="cb32-25"><a href="#cb32-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-26"><a href="#cb32-26" aria-hidden="true" tabindex="-1"></a>**What is MaxDiff?**  </span>
-<span id="cb32-27"><a href="#cb32-27" aria-hidden="true" tabindex="-1"></a>In a MaxDiff survey, each screen shows a small set of items (here, 4 classes). The respondent picks the *most preferred* and *least preferred* item from that screen. This repeats across many screens. Unlike asking "rate each class from 1–10," MaxDiff forces real trade-offs, which makes the data more reliable and avoids the problem of everyone giving everything a 7.</span>
-<span id="cb32-28"><a href="#cb32-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-29"><a href="#cb32-29" aria-hidden="true" tabindex="-1"></a>**Why MaxDiff instead of rating scales?**  </span>
-<span id="cb32-30"><a href="#cb32-30" aria-hidden="true" tabindex="-1"></a>Humans are much better at comparing and ranking than at using abstract numeric scales consistently. MaxDiff removes scale-use bias by turning every question into a concrete trade-off.</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>R</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>MaxDiff</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Bayesian</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>description: "Best-Worst Scaling survey analysis of MSBA class preferences using Counts, MLE, and Bayesian estimation of the MNL model."</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>title: "MaxDiff Analysis of MSBA Class Preferences"</span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>subtitle: "Counts, MLE, and Bayesian estimation of the MNL model"</span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>author: "Melody Wu"</span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>date: today</span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>format:</span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>  html:</span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a>    toc: true</span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>    toc-depth: 3</span>
+<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a>    toc-title: "Contents"</span>
+<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a>    theme: cosmo</span>
+<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a>    highlight-style: github</span>
+<span id="cb32-18"><a href="#cb32-18" aria-hidden="true" tabindex="-1"></a>    code-fold: show</span>
+<span id="cb32-19"><a href="#cb32-19" aria-hidden="true" tabindex="-1"></a>    code-tools: true</span>
+<span id="cb32-20"><a href="#cb32-20" aria-hidden="true" tabindex="-1"></a>    fig-align: center</span>
+<span id="cb32-21"><a href="#cb32-21" aria-hidden="true" tabindex="-1"></a>    df-print: paged</span>
+<span id="cb32-22"><a href="#cb32-22" aria-hidden="true" tabindex="-1"></a>execute:</span>
+<span id="cb32-23"><a href="#cb32-23" aria-hidden="true" tabindex="-1"></a>  warning: false</span>
+<span id="cb32-24"><a href="#cb32-24" aria-hidden="true" tabindex="-1"></a>  message: false</span>
+<span id="cb32-25"><a href="#cb32-25" aria-hidden="true" tabindex="-1"></a>categories:</span>
+<span id="cb32-26"><a href="#cb32-26" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>R</span>
+<span id="cb32-27"><a href="#cb32-27" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>MaxDiff</span>
+<span id="cb32-28"><a href="#cb32-28" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Bayesian</span>
+<span id="cb32-29"><a href="#cb32-29" aria-hidden="true" tabindex="-1"></a>description: "Best-Worst Scaling survey analysis of MSBA class preferences using Counts, MLE, and Bayesian estimation of the MNL model."</span>
+<span id="cb32-30"><a href="#cb32-30" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb32-31"><a href="#cb32-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-32"><a href="#cb32-32" aria-hidden="true" tabindex="-1"></a>**Three methods to analyze the data:**</span>
+<span id="cb32-32"><a href="#cb32-32" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introduction</span></span>
 <span id="cb32-33"><a href="#cb32-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-34"><a href="#cb32-34" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Counts Analysis** — a simple descriptive score: % times picked best minus % times picked worst</span>
-<span id="cb32-35"><a href="#cb32-35" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**MNL via Maximum Likelihood (MLE)** — a formal statistical model with point estimates and standard errors</span>
-<span id="cb32-36"><a href="#cb32-36" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**MNL via Bayesian (MCMC)** — same model but with full posterior distributions and credible intervals</span>
-<span id="cb32-37"><a href="#cb32-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-38"><a href="#cb32-38" aria-hidden="true" tabindex="-1"></a>All three should agree on the broad ranking of classes. The main differences are in how they quantify uncertainty and handle the underlying choice process.</span>
-<span id="cb32-39"><a href="#cb32-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-40"><a href="#cb32-40" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb32-34"><a href="#cb32-34" aria-hidden="true" tabindex="-1"></a>In this assignment, I analyze how MSBA students at UC San Diego Rady School of Management rank their 10 core classes using a **MaxDiff** (Best-Worst Scaling) survey.</span>
+<span id="cb32-35"><a href="#cb32-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-36"><a href="#cb32-36" aria-hidden="true" tabindex="-1"></a>**What is MaxDiff?**  </span>
+<span id="cb32-37"><a href="#cb32-37" aria-hidden="true" tabindex="-1"></a>In a MaxDiff survey, each screen shows a small set of items (here, 4 classes). The respondent picks the *most preferred* and *least preferred* item from that screen. This repeats across many screens. Unlike asking "rate each class from 1–10," MaxDiff forces real trade-offs, which makes the data more reliable and avoids the problem of everyone giving everything a 7.</span>
+<span id="cb32-38"><a href="#cb32-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-39"><a href="#cb32-39" aria-hidden="true" tabindex="-1"></a>**Why MaxDiff instead of rating scales?**  </span>
+<span id="cb32-40"><a href="#cb32-40" aria-hidden="true" tabindex="-1"></a>Humans are much better at comparing and ranking than at using abstract numeric scales consistently. MaxDiff removes scale-use bias by turning every question into a concrete trade-off.</span>
 <span id="cb32-41"><a href="#cb32-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-42"><a href="#cb32-42" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Data</span></span>
+<span id="cb32-42"><a href="#cb32-42" aria-hidden="true" tabindex="-1"></a>**Three methods to analyze the data:**</span>
 <span id="cb32-43"><a href="#cb32-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-46"><a href="#cb32-46" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb32-47"><a href="#cb32-47" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb32-48"><a href="#cb32-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-49"><a href="#cb32-49" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in the two CSV files (skip BOM manually)</span></span>
-<span id="cb32-50"><a href="#cb32-50" aria-hidden="true" tabindex="-1"></a>data   <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"maxdiff_design_and_choices.csv"</span>, <span class="at">name_repair =</span> <span class="st">"minimal"</span>)</span>
-<span id="cb32-51"><a href="#cb32-51" aria-hidden="true" tabindex="-1"></a>labels <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"maxdiff_item_labels.csv"</span>,        <span class="at">name_repair =</span> <span class="st">"minimal"</span>)</span>
-<span id="cb32-52"><a href="#cb32-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-53"><a href="#cb32-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop any columns with empty or NA names</span></span>
-<span id="cb32-54"><a href="#cb32-54" aria-hidden="true" tabindex="-1"></a>data   <span class="ot">&lt;-</span> data[, <span class="sc">!</span><span class="fu">is.na</span>(<span class="fu">names</span>(data)) <span class="sc">&amp;</span> <span class="fu">names</span>(data) <span class="sc">!=</span> <span class="st">""</span>]</span>
-<span id="cb32-55"><a href="#cb32-55" aria-hidden="true" tabindex="-1"></a>labels <span class="ot">&lt;-</span> labels[, <span class="sc">!</span><span class="fu">is.na</span>(<span class="fu">names</span>(labels)) <span class="sc">&amp;</span> <span class="fu">names</span>(labels) <span class="sc">!=</span> <span class="st">""</span>]</span>
+<span id="cb32-44"><a href="#cb32-44" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Counts Analysis** — a simple descriptive score: % times picked best minus % times picked worst</span>
+<span id="cb32-45"><a href="#cb32-45" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**MNL via Maximum Likelihood (MLE)** — a formal statistical model with point estimates and standard errors</span>
+<span id="cb32-46"><a href="#cb32-46" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**MNL via Bayesian (MCMC)** — same model but with full posterior distributions and credible intervals</span>
+<span id="cb32-47"><a href="#cb32-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-48"><a href="#cb32-48" aria-hidden="true" tabindex="-1"></a>All three should agree on the broad ranking of classes. The main differences are in how they quantify uncertainty and handle the underlying choice process.</span>
+<span id="cb32-49"><a href="#cb32-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-50"><a href="#cb32-50" aria-hidden="true" tabindex="-1"></a>categories:</span>
+<span id="cb32-51"><a href="#cb32-51" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>R</span>
+<span id="cb32-52"><a href="#cb32-52" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>MaxDiff</span>
+<span id="cb32-53"><a href="#cb32-53" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Bayesian</span>
+<span id="cb32-54"><a href="#cb32-54" aria-hidden="true" tabindex="-1"></a>description: "Best-Worst Scaling survey analysis of MSBA class preferences using Counts, MLE, and Bayesian estimation of the MNL model."</span>
+<span id="cb32-55"><a href="#cb32-55" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb32-56"><a href="#cb32-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-57"><a href="#cb32-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean column names</span></span>
-<span id="cb32-58"><a href="#cb32-58" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(data)   <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"resp_id"</span>, <span class="st">"task"</span>, <span class="st">"position"</span>, <span class="st">"item"</span>, <span class="st">"response"</span>)</span>
-<span id="cb32-59"><a href="#cb32-59" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(labels) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"item_num"</span>, <span class="st">"item_label"</span>)</span>
-<span id="cb32-60"><a href="#cb32-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-61"><a href="#cb32-61" aria-hidden="true" tabindex="-1"></a><span class="co"># Add short labels for plotting</span></span>
-<span id="cb32-62"><a href="#cb32-62" aria-hidden="true" tabindex="-1"></a>labels <span class="ot">&lt;-</span> labels <span class="sc">|&gt;</span></span>
-<span id="cb32-63"><a href="#cb32-63" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb32-64"><a href="#cb32-64" aria-hidden="true" tabindex="-1"></a>    <span class="at">short_label =</span> <span class="fu">c</span>(</span>
-<span id="cb32-65"><a href="#cb32-65" aria-hidden="true" tabindex="-1"></a>      <span class="st">"AI Math"</span>,               <span class="co"># 1</span></span>
-<span id="cb32-66"><a href="#cb32-66" aria-hidden="true" tabindex="-1"></a>      <span class="st">"SQL"</span>,                   <span class="co"># 2</span></span>
-<span id="cb32-67"><a href="#cb32-67" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Mktg/Fin/Ops"</span>,          <span class="co"># 3</span></span>
-<span id="cb32-68"><a href="#cb32-68" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Large Data"</span>,            <span class="co"># 4</span></span>
-<span id="cb32-69"><a href="#cb32-69" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Biz Analytics"</span>,         <span class="co"># 5</span></span>
-<span id="cb32-70"><a href="#cb32-70" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Analytics Consulting"</span>,  <span class="co"># 6</span></span>
-<span id="cb32-71"><a href="#cb32-71" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Customer Analytics"</span>,    <span class="co"># 7</span></span>
-<span id="cb32-72"><a href="#cb32-72" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Capstone"</span>,              <span class="co"># 8</span></span>
-<span id="cb32-73"><a href="#cb32-73" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Mktg Analytics"</span>,        <span class="co"># 9</span></span>
-<span id="cb32-74"><a href="#cb32-74" aria-hidden="true" tabindex="-1"></a>      <span class="st">"BI Systems"</span>             <span class="co"># 10</span></span>
-<span id="cb32-75"><a href="#cb32-75" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb32-76"><a href="#cb32-76" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb32-77"><a href="#cb32-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-78"><a href="#cb32-78" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic descriptives</span></span>
-<span id="cb32-79"><a href="#cb32-79" aria-hidden="true" tabindex="-1"></a>N          <span class="ot">&lt;-</span> <span class="fu">n_distinct</span>(data<span class="sc">$</span>resp_id)</span>
-<span id="cb32-80"><a href="#cb32-80" aria-hidden="true" tabindex="-1"></a>T_per_resp <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
-<span id="cb32-81"><a href="#cb32-81" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(resp_id) <span class="sc">|&gt;</span></span>
-<span id="cb32-82"><a href="#cb32-82" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n_tasks =</span> <span class="fu">n_distinct</span>(task)) <span class="sc">|&gt;</span></span>
-<span id="cb32-83"><a href="#cb32-83" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(n_tasks) <span class="sc">|&gt;</span></span>
-<span id="cb32-84"><a href="#cb32-84" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>()</span>
-<span id="cb32-85"><a href="#cb32-85" aria-hidden="true" tabindex="-1"></a>J           <span class="ot">&lt;-</span> <span class="dv">4</span></span>
-<span id="cb32-86"><a href="#cb32-86" aria-hidden="true" tabindex="-1"></a>total_items <span class="ot">&lt;-</span> <span class="fu">n_distinct</span>(data<span class="sc">$</span>item)</span>
-<span id="cb32-87"><a href="#cb32-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-88"><a href="#cb32-88" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Respondents N ="</span>, N, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb32-89"><a href="#cb32-89" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Tasks per person T ="</span>, T_per_resp, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb32-90"><a href="#cb32-90" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Items per task J ="</span>, J, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb32-91"><a href="#cb32-91" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Total items ="</span>, total_items, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb32-92"><a href="#cb32-92" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb32-93"><a href="#cb32-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-96"><a href="#cb32-96" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb32-97"><a href="#cb32-97" aria-hidden="true" tabindex="-1"></a><span class="co"># Sanity check: every task must have exactly 1 best (response=1) and 1 worst (response=-1)</span></span>
-<span id="cb32-98"><a href="#cb32-98" aria-hidden="true" tabindex="-1"></a>check <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
-<span id="cb32-99"><a href="#cb32-99" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(resp_id, task) <span class="sc">|&gt;</span></span>
-<span id="cb32-100"><a href="#cb32-100" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n_best  =</span> <span class="fu">sum</span>(response <span class="sc">==</span>  <span class="dv">1</span>),</span>
-<span id="cb32-101"><a href="#cb32-101" aria-hidden="true" tabindex="-1"></a>            <span class="at">n_worst =</span> <span class="fu">sum</span>(response <span class="sc">==</span> <span class="sc">-</span><span class="dv">1</span>),</span>
-<span id="cb32-102"><a href="#cb32-102" aria-hidden="true" tabindex="-1"></a>            <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
-<span id="cb32-103"><a href="#cb32-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-104"><a href="#cb32-104" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Every task has exactly 1 best? "</span>,  <span class="fu">all</span>(check<span class="sc">$</span>n_best  <span class="sc">==</span> <span class="dv">1</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb32-105"><a href="#cb32-105" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Every task has exactly 1 worst?"</span>, <span class="fu">all</span>(check<span class="sc">$</span>n_worst <span class="sc">==</span> <span class="dv">1</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb32-106"><a href="#cb32-106" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb32-107"><a href="#cb32-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-110"><a href="#cb32-110" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb32-111"><a href="#cb32-111" aria-hidden="true" tabindex="-1"></a><span class="co"># Exposure counts — should be roughly equal across all 10 items</span></span>
-<span id="cb32-112"><a href="#cb32-112" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span></span>
-<span id="cb32-113"><a href="#cb32-113" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(item) <span class="sc">|&gt;</span></span>
-<span id="cb32-114"><a href="#cb32-114" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">times_shown =</span> <span class="fu">n</span>()) <span class="sc">|&gt;</span></span>
-<span id="cb32-115"><a href="#cb32-115" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(labels, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"item"</span> <span class="ot">=</span> <span class="st">"item_num"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb32-116"><a href="#cb32-116" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(item, short_label, times_shown) <span class="sc">|&gt;</span></span>
-<span id="cb32-117"><a href="#cb32-117" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(item) <span class="sc">|&gt;</span></span>
-<span id="cb32-118"><a href="#cb32-118" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Item #"</span>, <span class="st">"Class"</span>, <span class="st">"Times Shown"</span>),</span>
-<span id="cb32-119"><a href="#cb32-119" aria-hidden="true" tabindex="-1"></a>               <span class="at">caption =</span> <span class="st">"Number of times each class was shown across the full study"</span>)</span>
-<span id="cb32-120"><a href="#cb32-120" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb32-121"><a href="#cb32-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-122"><a href="#cb32-122" aria-hidden="true" tabindex="-1"></a>The dataset has **`r N` respondents**, each completing **`r T_per_resp` tasks**. Every task shows 4 of the 10 MSBA classes. The sanity check passes, and exposure counts are roughly balanced — as expected from a balanced MaxDiff design.</span>
-<span id="cb32-123"><a href="#cb32-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-124"><a href="#cb32-124" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb32-125"><a href="#cb32-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-126"><a href="#cb32-126" aria-hidden="true" tabindex="-1"></a><span class="fu">## Counts Analysis</span></span>
-<span id="cb32-127"><a href="#cb32-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-128"><a href="#cb32-128" aria-hidden="true" tabindex="-1"></a>The simplest way to summarize MaxDiff data is the **counts score**: for each class, compute the percentage of times it was picked best minus the percentage of times it was picked worst.</span>
-<span id="cb32-129"><a href="#cb32-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-130"><a href="#cb32-130" aria-hidden="true" tabindex="-1"></a>$$\text{score}_j = \%\text{best}_j - \%\text{worst}_j$$</span>
-<span id="cb32-131"><a href="#cb32-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-132"><a href="#cb32-132" aria-hidden="true" tabindex="-1"></a>A score near +1 means students almost always prefer this class when shown; near −1 means it is almost always avoided; near 0 means it is middle-of-the-pack or polarizing.</span>
-<span id="cb32-133"><a href="#cb32-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-136"><a href="#cb32-136" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb32-137"><a href="#cb32-137" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute counts score for each item</span></span>
-<span id="cb32-138"><a href="#cb32-138" aria-hidden="true" tabindex="-1"></a>counts <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
-<span id="cb32-139"><a href="#cb32-139" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(item) <span class="sc">|&gt;</span></span>
-<span id="cb32-140"><a href="#cb32-140" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb32-141"><a href="#cb32-141" aria-hidden="true" tabindex="-1"></a>    <span class="at">shown   =</span> <span class="fu">n</span>(),</span>
-<span id="cb32-142"><a href="#cb32-142" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_best  =</span> <span class="fu">sum</span>(response <span class="sc">==</span>  <span class="dv">1</span>),</span>
-<span id="cb32-143"><a href="#cb32-143" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_worst =</span> <span class="fu">sum</span>(response <span class="sc">==</span> <span class="sc">-</span><span class="dv">1</span>)</span>
-<span id="cb32-144"><a href="#cb32-144" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb32-145"><a href="#cb32-145" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb32-146"><a href="#cb32-146" aria-hidden="true" tabindex="-1"></a>    <span class="at">pct_best  =</span> n_best  <span class="sc">/</span> shown,</span>
-<span id="cb32-147"><a href="#cb32-147" aria-hidden="true" tabindex="-1"></a>    <span class="at">pct_worst =</span> n_worst <span class="sc">/</span> shown,</span>
-<span id="cb32-148"><a href="#cb32-148" aria-hidden="true" tabindex="-1"></a>    <span class="at">score     =</span> pct_best <span class="sc">-</span> pct_worst</span>
-<span id="cb32-149"><a href="#cb32-149" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb32-150"><a href="#cb32-150" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(labels, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"item"</span> <span class="ot">=</span> <span class="st">"item_num"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb32-151"><a href="#cb32-151" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(score))</span>
-<span id="cb32-152"><a href="#cb32-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-153"><a href="#cb32-153" aria-hidden="true" tabindex="-1"></a>counts <span class="sc">|&gt;</span></span>
-<span id="cb32-154"><a href="#cb32-154" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(item, short_label, shown, n_best, n_worst, pct_best, pct_worst, score) <span class="sc">|&gt;</span></span>
-<span id="cb32-155"><a href="#cb32-155" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">c</span>(pct_best, pct_worst, score), \(x) <span class="fu">round</span>(x, <span class="dv">3</span>))) <span class="sc">|&gt;</span></span>
-<span id="cb32-156"><a href="#cb32-156" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
-<span id="cb32-157"><a href="#cb32-157" aria-hidden="true" tabindex="-1"></a>    <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Item #"</span>, <span class="st">"Class"</span>, <span class="st">"Shown"</span>, <span class="st">"# Best"</span>, <span class="st">"# Worst"</span>,</span>
-<span id="cb32-158"><a href="#cb32-158" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"% Best"</span>, <span class="st">"% Worst"</span>, <span class="st">"Score"</span>),</span>
-<span id="cb32-159"><a href="#cb32-159" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Counts Analysis — sorted by score (higher = more preferred)"</span></span>
-<span id="cb32-160"><a href="#cb32-160" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb32-161"><a href="#cb32-161" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb32-162"><a href="#cb32-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-165"><a href="#cb32-165" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb32-166"><a href="#cb32-166" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 8</span></span>
-<span id="cb32-167"><a href="#cb32-167" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 5</span></span>
-<span id="cb32-168"><a href="#cb32-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-169"><a href="#cb32-169" aria-hidden="true" tabindex="-1"></a><span class="co"># Bootstrap 95% CIs: resample respondents 1,000 times</span></span>
-<span id="cb32-170"><a href="#cb32-170" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
-<span id="cb32-171"><a href="#cb32-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-172"><a href="#cb32-172" aria-hidden="true" tabindex="-1"></a>resp_item_summary <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
-<span id="cb32-173"><a href="#cb32-173" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(resp_id, item) <span class="sc">|&gt;</span></span>
-<span id="cb32-174"><a href="#cb32-174" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">shown =</span> <span class="fu">n</span>(),</span>
-<span id="cb32-175"><a href="#cb32-175" aria-hidden="true" tabindex="-1"></a>            <span class="at">best  =</span> <span class="fu">sum</span>(response <span class="sc">==</span>  <span class="dv">1</span>),</span>
-<span id="cb32-176"><a href="#cb32-176" aria-hidden="true" tabindex="-1"></a>            <span class="at">worst =</span> <span class="fu">sum</span>(response <span class="sc">==</span> <span class="sc">-</span><span class="dv">1</span>),</span>
-<span id="cb32-177"><a href="#cb32-177" aria-hidden="true" tabindex="-1"></a>            <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
-<span id="cb32-178"><a href="#cb32-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-179"><a href="#cb32-179" aria-hidden="true" tabindex="-1"></a>respondents <span class="ot">&lt;-</span> <span class="fu">unique</span>(data<span class="sc">$</span>resp_id)</span>
-<span id="cb32-180"><a href="#cb32-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-181"><a href="#cb32-181" aria-hidden="true" tabindex="-1"></a>boot_scores <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, {</span>
-<span id="cb32-182"><a href="#cb32-182" aria-hidden="true" tabindex="-1"></a>  sampled   <span class="ot">&lt;-</span> <span class="fu">sample</span>(respondents, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb32-183"><a href="#cb32-183" aria-hidden="true" tabindex="-1"></a>  boot_data <span class="ot">&lt;-</span> <span class="fu">map_dfr</span>(sampled, \(r) resp_item_summary[resp_item_summary<span class="sc">$</span>resp_id <span class="sc">==</span> r, ])</span>
-<span id="cb32-184"><a href="#cb32-184" aria-hidden="true" tabindex="-1"></a>  boot_data <span class="sc">|&gt;</span></span>
-<span id="cb32-185"><a href="#cb32-185" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(item) <span class="sc">|&gt;</span></span>
-<span id="cb32-186"><a href="#cb32-186" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">score =</span> (<span class="fu">sum</span>(best) <span class="sc">-</span> <span class="fu">sum</span>(worst)) <span class="sc">/</span> <span class="fu">sum</span>(shown), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb32-187"><a href="#cb32-187" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(item) <span class="sc">|&gt;</span></span>
-<span id="cb32-188"><a href="#cb32-188" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pull</span>(score)</span>
-<span id="cb32-189"><a href="#cb32-189" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb32-190"><a href="#cb32-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-191"><a href="#cb32-191" aria-hidden="true" tabindex="-1"></a>ci_low  <span class="ot">&lt;-</span> <span class="fu">apply</span>(boot_scores, <span class="dv">1</span>, quantile, <span class="fl">0.025</span>)</span>
-<span id="cb32-192"><a href="#cb32-192" aria-hidden="true" tabindex="-1"></a>ci_high <span class="ot">&lt;-</span> <span class="fu">apply</span>(boot_scores, <span class="dv">1</span>, quantile, <span class="fl">0.975</span>)</span>
-<span id="cb32-193"><a href="#cb32-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-194"><a href="#cb32-194" aria-hidden="true" tabindex="-1"></a>counts_ci <span class="ot">&lt;-</span> counts <span class="sc">|&gt;</span></span>
-<span id="cb32-195"><a href="#cb32-195" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(item) <span class="sc">|&gt;</span></span>
-<span id="cb32-196"><a href="#cb32-196" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ci_low =</span> ci_low, <span class="at">ci_high =</span> ci_high) <span class="sc">|&gt;</span></span>
-<span id="cb32-197"><a href="#cb32-197" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(score))</span>
+<span id="cb32-57"><a href="#cb32-57" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Data</span></span>
+<span id="cb32-58"><a href="#cb32-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-61"><a href="#cb32-61" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb32-62"><a href="#cb32-62" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb32-63"><a href="#cb32-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-64"><a href="#cb32-64" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in the two CSV files (skip BOM manually)</span></span>
+<span id="cb32-65"><a href="#cb32-65" aria-hidden="true" tabindex="-1"></a>data   <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"maxdiff_design_and_choices.csv"</span>, <span class="at">name_repair =</span> <span class="st">"minimal"</span>)</span>
+<span id="cb32-66"><a href="#cb32-66" aria-hidden="true" tabindex="-1"></a>labels <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"maxdiff_item_labels.csv"</span>,        <span class="at">name_repair =</span> <span class="st">"minimal"</span>)</span>
+<span id="cb32-67"><a href="#cb32-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-68"><a href="#cb32-68" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop any columns with empty or NA names</span></span>
+<span id="cb32-69"><a href="#cb32-69" aria-hidden="true" tabindex="-1"></a>data   <span class="ot">&lt;-</span> data[, <span class="sc">!</span><span class="fu">is.na</span>(<span class="fu">names</span>(data)) <span class="sc">&amp;</span> <span class="fu">names</span>(data) <span class="sc">!=</span> <span class="st">""</span>]</span>
+<span id="cb32-70"><a href="#cb32-70" aria-hidden="true" tabindex="-1"></a>labels <span class="ot">&lt;-</span> labels[, <span class="sc">!</span><span class="fu">is.na</span>(<span class="fu">names</span>(labels)) <span class="sc">&amp;</span> <span class="fu">names</span>(labels) <span class="sc">!=</span> <span class="st">""</span>]</span>
+<span id="cb32-71"><a href="#cb32-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-72"><a href="#cb32-72" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean column names</span></span>
+<span id="cb32-73"><a href="#cb32-73" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(data)   <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"resp_id"</span>, <span class="st">"task"</span>, <span class="st">"position"</span>, <span class="st">"item"</span>, <span class="st">"response"</span>)</span>
+<span id="cb32-74"><a href="#cb32-74" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(labels) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"item_num"</span>, <span class="st">"item_label"</span>)</span>
+<span id="cb32-75"><a href="#cb32-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-76"><a href="#cb32-76" aria-hidden="true" tabindex="-1"></a><span class="co"># Add short labels for plotting</span></span>
+<span id="cb32-77"><a href="#cb32-77" aria-hidden="true" tabindex="-1"></a>labels <span class="ot">&lt;-</span> labels <span class="sc">|&gt;</span></span>
+<span id="cb32-78"><a href="#cb32-78" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb32-79"><a href="#cb32-79" aria-hidden="true" tabindex="-1"></a>    <span class="at">short_label =</span> <span class="fu">c</span>(</span>
+<span id="cb32-80"><a href="#cb32-80" aria-hidden="true" tabindex="-1"></a>      <span class="st">"AI Math"</span>,               <span class="co"># 1</span></span>
+<span id="cb32-81"><a href="#cb32-81" aria-hidden="true" tabindex="-1"></a>      <span class="st">"SQL"</span>,                   <span class="co"># 2</span></span>
+<span id="cb32-82"><a href="#cb32-82" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Mktg/Fin/Ops"</span>,          <span class="co"># 3</span></span>
+<span id="cb32-83"><a href="#cb32-83" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Large Data"</span>,            <span class="co"># 4</span></span>
+<span id="cb32-84"><a href="#cb32-84" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Biz Analytics"</span>,         <span class="co"># 5</span></span>
+<span id="cb32-85"><a href="#cb32-85" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Analytics Consulting"</span>,  <span class="co"># 6</span></span>
+<span id="cb32-86"><a href="#cb32-86" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Customer Analytics"</span>,    <span class="co"># 7</span></span>
+<span id="cb32-87"><a href="#cb32-87" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Capstone"</span>,              <span class="co"># 8</span></span>
+<span id="cb32-88"><a href="#cb32-88" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Mktg Analytics"</span>,        <span class="co"># 9</span></span>
+<span id="cb32-89"><a href="#cb32-89" aria-hidden="true" tabindex="-1"></a>      <span class="st">"BI Systems"</span>             <span class="co"># 10</span></span>
+<span id="cb32-90"><a href="#cb32-90" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb32-91"><a href="#cb32-91" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb32-92"><a href="#cb32-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-93"><a href="#cb32-93" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic descriptives</span></span>
+<span id="cb32-94"><a href="#cb32-94" aria-hidden="true" tabindex="-1"></a>N          <span class="ot">&lt;-</span> <span class="fu">n_distinct</span>(data<span class="sc">$</span>resp_id)</span>
+<span id="cb32-95"><a href="#cb32-95" aria-hidden="true" tabindex="-1"></a>T_per_resp <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
+<span id="cb32-96"><a href="#cb32-96" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(resp_id) <span class="sc">|&gt;</span></span>
+<span id="cb32-97"><a href="#cb32-97" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n_tasks =</span> <span class="fu">n_distinct</span>(task)) <span class="sc">|&gt;</span></span>
+<span id="cb32-98"><a href="#cb32-98" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(n_tasks) <span class="sc">|&gt;</span></span>
+<span id="cb32-99"><a href="#cb32-99" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>()</span>
+<span id="cb32-100"><a href="#cb32-100" aria-hidden="true" tabindex="-1"></a>J           <span class="ot">&lt;-</span> <span class="dv">4</span></span>
+<span id="cb32-101"><a href="#cb32-101" aria-hidden="true" tabindex="-1"></a>total_items <span class="ot">&lt;-</span> <span class="fu">n_distinct</span>(data<span class="sc">$</span>item)</span>
+<span id="cb32-102"><a href="#cb32-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-103"><a href="#cb32-103" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Respondents N ="</span>, N, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb32-104"><a href="#cb32-104" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Tasks per person T ="</span>, T_per_resp, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb32-105"><a href="#cb32-105" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Items per task J ="</span>, J, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb32-106"><a href="#cb32-106" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Total items ="</span>, total_items, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb32-107"><a href="#cb32-107" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb32-108"><a href="#cb32-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-111"><a href="#cb32-111" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb32-112"><a href="#cb32-112" aria-hidden="true" tabindex="-1"></a><span class="co"># Sanity check: every task must have exactly 1 best (response=1) and 1 worst (response=-1)</span></span>
+<span id="cb32-113"><a href="#cb32-113" aria-hidden="true" tabindex="-1"></a>check <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
+<span id="cb32-114"><a href="#cb32-114" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(resp_id, task) <span class="sc">|&gt;</span></span>
+<span id="cb32-115"><a href="#cb32-115" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n_best  =</span> <span class="fu">sum</span>(response <span class="sc">==</span>  <span class="dv">1</span>),</span>
+<span id="cb32-116"><a href="#cb32-116" aria-hidden="true" tabindex="-1"></a>            <span class="at">n_worst =</span> <span class="fu">sum</span>(response <span class="sc">==</span> <span class="sc">-</span><span class="dv">1</span>),</span>
+<span id="cb32-117"><a href="#cb32-117" aria-hidden="true" tabindex="-1"></a>            <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
+<span id="cb32-118"><a href="#cb32-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-119"><a href="#cb32-119" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Every task has exactly 1 best? "</span>,  <span class="fu">all</span>(check<span class="sc">$</span>n_best  <span class="sc">==</span> <span class="dv">1</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb32-120"><a href="#cb32-120" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Every task has exactly 1 worst?"</span>, <span class="fu">all</span>(check<span class="sc">$</span>n_worst <span class="sc">==</span> <span class="dv">1</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb32-121"><a href="#cb32-121" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb32-122"><a href="#cb32-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-125"><a href="#cb32-125" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb32-126"><a href="#cb32-126" aria-hidden="true" tabindex="-1"></a><span class="co"># Exposure counts — should be roughly equal across all 10 items</span></span>
+<span id="cb32-127"><a href="#cb32-127" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span></span>
+<span id="cb32-128"><a href="#cb32-128" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(item) <span class="sc">|&gt;</span></span>
+<span id="cb32-129"><a href="#cb32-129" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">times_shown =</span> <span class="fu">n</span>()) <span class="sc">|&gt;</span></span>
+<span id="cb32-130"><a href="#cb32-130" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(labels, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"item"</span> <span class="ot">=</span> <span class="st">"item_num"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb32-131"><a href="#cb32-131" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(item, short_label, times_shown) <span class="sc">|&gt;</span></span>
+<span id="cb32-132"><a href="#cb32-132" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(item) <span class="sc">|&gt;</span></span>
+<span id="cb32-133"><a href="#cb32-133" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Item #"</span>, <span class="st">"Class"</span>, <span class="st">"Times Shown"</span>),</span>
+<span id="cb32-134"><a href="#cb32-134" aria-hidden="true" tabindex="-1"></a>               <span class="at">caption =</span> <span class="st">"Number of times each class was shown across the full study"</span>)</span>
+<span id="cb32-135"><a href="#cb32-135" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb32-136"><a href="#cb32-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-137"><a href="#cb32-137" aria-hidden="true" tabindex="-1"></a>The dataset has **`r N` respondents**, each completing **`r T_per_resp` tasks**. Every task shows 4 of the 10 MSBA classes. The sanity check passes, and exposure counts are roughly balanced — as expected from a balanced MaxDiff design.</span>
+<span id="cb32-138"><a href="#cb32-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-139"><a href="#cb32-139" aria-hidden="true" tabindex="-1"></a>categories:</span>
+<span id="cb32-140"><a href="#cb32-140" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>R</span>
+<span id="cb32-141"><a href="#cb32-141" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>MaxDiff</span>
+<span id="cb32-142"><a href="#cb32-142" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Bayesian</span>
+<span id="cb32-143"><a href="#cb32-143" aria-hidden="true" tabindex="-1"></a>description: "Best-Worst Scaling survey analysis of MSBA class preferences using Counts, MLE, and Bayesian estimation of the MNL model."</span>
+<span id="cb32-144"><a href="#cb32-144" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb32-145"><a href="#cb32-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-146"><a href="#cb32-146" aria-hidden="true" tabindex="-1"></a><span class="fu">## Counts Analysis</span></span>
+<span id="cb32-147"><a href="#cb32-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-148"><a href="#cb32-148" aria-hidden="true" tabindex="-1"></a>The simplest way to summarize MaxDiff data is the **counts score**: for each class, compute the percentage of times it was picked best minus the percentage of times it was picked worst.</span>
+<span id="cb32-149"><a href="#cb32-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-150"><a href="#cb32-150" aria-hidden="true" tabindex="-1"></a>$$\text{score}_j = \%\text{best}_j - \%\text{worst}_j$$</span>
+<span id="cb32-151"><a href="#cb32-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-152"><a href="#cb32-152" aria-hidden="true" tabindex="-1"></a>A score near +1 means students almost always prefer this class when shown; near −1 means it is almost always avoided; near 0 means it is middle-of-the-pack or polarizing.</span>
+<span id="cb32-153"><a href="#cb32-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-156"><a href="#cb32-156" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb32-157"><a href="#cb32-157" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute counts score for each item</span></span>
+<span id="cb32-158"><a href="#cb32-158" aria-hidden="true" tabindex="-1"></a>counts <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
+<span id="cb32-159"><a href="#cb32-159" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(item) <span class="sc">|&gt;</span></span>
+<span id="cb32-160"><a href="#cb32-160" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb32-161"><a href="#cb32-161" aria-hidden="true" tabindex="-1"></a>    <span class="at">shown   =</span> <span class="fu">n</span>(),</span>
+<span id="cb32-162"><a href="#cb32-162" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_best  =</span> <span class="fu">sum</span>(response <span class="sc">==</span>  <span class="dv">1</span>),</span>
+<span id="cb32-163"><a href="#cb32-163" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_worst =</span> <span class="fu">sum</span>(response <span class="sc">==</span> <span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb32-164"><a href="#cb32-164" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb32-165"><a href="#cb32-165" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb32-166"><a href="#cb32-166" aria-hidden="true" tabindex="-1"></a>    <span class="at">pct_best  =</span> n_best  <span class="sc">/</span> shown,</span>
+<span id="cb32-167"><a href="#cb32-167" aria-hidden="true" tabindex="-1"></a>    <span class="at">pct_worst =</span> n_worst <span class="sc">/</span> shown,</span>
+<span id="cb32-168"><a href="#cb32-168" aria-hidden="true" tabindex="-1"></a>    <span class="at">score     =</span> pct_best <span class="sc">-</span> pct_worst</span>
+<span id="cb32-169"><a href="#cb32-169" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb32-170"><a href="#cb32-170" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(labels, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"item"</span> <span class="ot">=</span> <span class="st">"item_num"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb32-171"><a href="#cb32-171" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(score))</span>
+<span id="cb32-172"><a href="#cb32-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-173"><a href="#cb32-173" aria-hidden="true" tabindex="-1"></a>counts <span class="sc">|&gt;</span></span>
+<span id="cb32-174"><a href="#cb32-174" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(item, short_label, shown, n_best, n_worst, pct_best, pct_worst, score) <span class="sc">|&gt;</span></span>
+<span id="cb32-175"><a href="#cb32-175" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">c</span>(pct_best, pct_worst, score), \(x) <span class="fu">round</span>(x, <span class="dv">3</span>))) <span class="sc">|&gt;</span></span>
+<span id="cb32-176"><a href="#cb32-176" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb32-177"><a href="#cb32-177" aria-hidden="true" tabindex="-1"></a>    <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Item #"</span>, <span class="st">"Class"</span>, <span class="st">"Shown"</span>, <span class="st">"# Best"</span>, <span class="st">"# Worst"</span>,</span>
+<span id="cb32-178"><a href="#cb32-178" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"% Best"</span>, <span class="st">"% Worst"</span>, <span class="st">"Score"</span>),</span>
+<span id="cb32-179"><a href="#cb32-179" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Counts Analysis — sorted by score (higher = more preferred)"</span></span>
+<span id="cb32-180"><a href="#cb32-180" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb32-181"><a href="#cb32-181" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb32-182"><a href="#cb32-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-185"><a href="#cb32-185" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb32-186"><a href="#cb32-186" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 8</span></span>
+<span id="cb32-187"><a href="#cb32-187" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 5</span></span>
+<span id="cb32-188"><a href="#cb32-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-189"><a href="#cb32-189" aria-hidden="true" tabindex="-1"></a><span class="co"># Bootstrap 95% CIs: resample respondents 1,000 times</span></span>
+<span id="cb32-190"><a href="#cb32-190" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb32-191"><a href="#cb32-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-192"><a href="#cb32-192" aria-hidden="true" tabindex="-1"></a>resp_item_summary <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
+<span id="cb32-193"><a href="#cb32-193" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(resp_id, item) <span class="sc">|&gt;</span></span>
+<span id="cb32-194"><a href="#cb32-194" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">shown =</span> <span class="fu">n</span>(),</span>
+<span id="cb32-195"><a href="#cb32-195" aria-hidden="true" tabindex="-1"></a>            <span class="at">best  =</span> <span class="fu">sum</span>(response <span class="sc">==</span>  <span class="dv">1</span>),</span>
+<span id="cb32-196"><a href="#cb32-196" aria-hidden="true" tabindex="-1"></a>            <span class="at">worst =</span> <span class="fu">sum</span>(response <span class="sc">==</span> <span class="sc">-</span><span class="dv">1</span>),</span>
+<span id="cb32-197"><a href="#cb32-197" aria-hidden="true" tabindex="-1"></a>            <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
 <span id="cb32-198"><a href="#cb32-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-199"><a href="#cb32-199" aria-hidden="true" tabindex="-1"></a>counts_ci <span class="sc">|&gt;</span></span>
-<span id="cb32-200"><a href="#cb32-200" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">short_label =</span> <span class="fu">factor</span>(short_label, <span class="at">levels =</span> <span class="fu">rev</span>(short_label))) <span class="sc">|&gt;</span></span>
-<span id="cb32-201"><a href="#cb32-201" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> score, <span class="at">y =</span> short_label)) <span class="sc">+</span></span>
-<span id="cb32-202"><a href="#cb32-202" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"#4C72B0"</span>, <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
-<span id="cb32-203"><a href="#cb32-203" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbarh</span>(<span class="fu">aes</span>(<span class="at">xmin =</span> ci_low, <span class="at">xmax =</span> ci_high), <span class="at">height =</span> <span class="fl">0.3</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
-<span id="cb32-204"><a href="#cb32-204" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"gray40"</span>) <span class="sc">+</span></span>
-<span id="cb32-205"><a href="#cb32-205" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb32-206"><a href="#cb32-206" aria-hidden="true" tabindex="-1"></a>    <span class="at">title   =</span> <span class="st">"MaxDiff Counts Scores by MSBA Class"</span>,</span>
-<span id="cb32-207"><a href="#cb32-207" aria-hidden="true" tabindex="-1"></a>    <span class="at">x       =</span> <span class="st">"Score (% Best − % Worst)"</span>,</span>
-<span id="cb32-208"><a href="#cb32-208" aria-hidden="true" tabindex="-1"></a>    <span class="at">y       =</span> <span class="cn">NULL</span>,</span>
-<span id="cb32-209"><a href="#cb32-209" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Error bars = 95% bootstrap CI (1,000 resamples of respondents)"</span></span>
-<span id="cb32-210"><a href="#cb32-210" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb32-211"><a href="#cb32-211" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>)</span>
-<span id="cb32-212"><a href="#cb32-212" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb32-199"><a href="#cb32-199" aria-hidden="true" tabindex="-1"></a>respondents <span class="ot">&lt;-</span> <span class="fu">unique</span>(data<span class="sc">$</span>resp_id)</span>
+<span id="cb32-200"><a href="#cb32-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-201"><a href="#cb32-201" aria-hidden="true" tabindex="-1"></a>boot_scores <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, {</span>
+<span id="cb32-202"><a href="#cb32-202" aria-hidden="true" tabindex="-1"></a>  sampled   <span class="ot">&lt;-</span> <span class="fu">sample</span>(respondents, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb32-203"><a href="#cb32-203" aria-hidden="true" tabindex="-1"></a>  boot_data <span class="ot">&lt;-</span> <span class="fu">map_dfr</span>(sampled, \(r) resp_item_summary[resp_item_summary<span class="sc">$</span>resp_id <span class="sc">==</span> r, ])</span>
+<span id="cb32-204"><a href="#cb32-204" aria-hidden="true" tabindex="-1"></a>  boot_data <span class="sc">|&gt;</span></span>
+<span id="cb32-205"><a href="#cb32-205" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(item) <span class="sc">|&gt;</span></span>
+<span id="cb32-206"><a href="#cb32-206" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">score =</span> (<span class="fu">sum</span>(best) <span class="sc">-</span> <span class="fu">sum</span>(worst)) <span class="sc">/</span> <span class="fu">sum</span>(shown), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb32-207"><a href="#cb32-207" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(item) <span class="sc">|&gt;</span></span>
+<span id="cb32-208"><a href="#cb32-208" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pull</span>(score)</span>
+<span id="cb32-209"><a href="#cb32-209" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb32-210"><a href="#cb32-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-211"><a href="#cb32-211" aria-hidden="true" tabindex="-1"></a>ci_low  <span class="ot">&lt;-</span> <span class="fu">apply</span>(boot_scores, <span class="dv">1</span>, quantile, <span class="fl">0.025</span>)</span>
+<span id="cb32-212"><a href="#cb32-212" aria-hidden="true" tabindex="-1"></a>ci_high <span class="ot">&lt;-</span> <span class="fu">apply</span>(boot_scores, <span class="dv">1</span>, quantile, <span class="fl">0.975</span>)</span>
 <span id="cb32-213"><a href="#cb32-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-214"><a href="#cb32-214" aria-hidden="true" tabindex="-1"></a>**Observations:** Customer Analytics and Marketing Analytics score highest — students strongly prefer these when shown. BI Systems and Capstone score lowest, with clearly negative scores. The MLE analysis below tests whether these patterns hold up in a formal choice model.</span>
-<span id="cb32-215"><a href="#cb32-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-216"><a href="#cb32-216" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb32-217"><a href="#cb32-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-218"><a href="#cb32-218" aria-hidden="true" tabindex="-1"></a><span class="fu">## From MaxDiff Data to MNL Choices</span></span>
-<span id="cb32-219"><a href="#cb32-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-220"><a href="#cb32-220" aria-hidden="true" tabindex="-1"></a>The **Multinomial Logit (MNL)** model assigns each class $j$ a utility coefficient $\beta_j$. On a task showing 4 classes $<span class="sc">\{</span>a, b, c, d<span class="sc">\}</span>$, the probability of picking $b$ as *best* is the softmax:</span>
-<span id="cb32-221"><a href="#cb32-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-222"><a href="#cb32-222" aria-hidden="true" tabindex="-1"></a>$$P(\text{best} = b) = \frac{\exp(\beta_b)}{\exp(\beta_a) + \exp(\beta_b) + \exp(\beta_c) + \exp(\beta_d)}$$</span>
-<span id="cb32-223"><a href="#cb32-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-224"><a href="#cb32-224" aria-hidden="true" tabindex="-1"></a>After choosing best, the worst is picked from the remaining 3 classes with **flipped** utilities:</span>
-<span id="cb32-225"><a href="#cb32-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-226"><a href="#cb32-226" aria-hidden="true" tabindex="-1"></a>$$P(\text{worst} = c \mid \text{best} = b) = \frac{\exp(-\beta_c)}{\exp(-\beta_a) + \exp(-\beta_c) + \exp(-\beta_d)}$$</span>
-<span id="cb32-227"><a href="#cb32-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-228"><a href="#cb32-228" aria-hidden="true" tabindex="-1"></a>Each task therefore contributes **two** MNL observations to the likelihood.</span>
-<span id="cb32-229"><a href="#cb32-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-230"><a href="#cb32-230" aria-hidden="true" tabindex="-1"></a>**Identifiability:** The softmax is invariant to adding a constant to all $\beta$'s, so we can only identify *differences* in utility. We fix $\beta_1 = 0$ (AI Math as the reference class) and estimate $\beta_2, \ldots, \beta_{10}$.</span>
-<span id="cb32-231"><a href="#cb32-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-234"><a href="#cb32-234" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb32-235"><a href="#cb32-235" aria-hidden="true" tabindex="-1"></a><span class="co"># Reshape: one row per task, storing the 4 items shown + which was best + which was worst</span></span>
-<span id="cb32-236"><a href="#cb32-236" aria-hidden="true" tabindex="-1"></a>tasks <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
-<span id="cb32-237"><a href="#cb32-237" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(resp_id, task) <span class="sc">|&gt;</span></span>
-<span id="cb32-238"><a href="#cb32-238" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb32-239"><a href="#cb32-239" aria-hidden="true" tabindex="-1"></a>    <span class="at">items =</span> <span class="fu">list</span>(item),</span>
-<span id="cb32-240"><a href="#cb32-240" aria-hidden="true" tabindex="-1"></a>    <span class="at">best  =</span> item[response <span class="sc">==</span>  <span class="dv">1</span>],</span>
-<span id="cb32-241"><a href="#cb32-241" aria-hidden="true" tabindex="-1"></a>    <span class="at">worst =</span> item[response <span class="sc">==</span> <span class="sc">-</span><span class="dv">1</span>],</span>
-<span id="cb32-242"><a href="#cb32-242" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
-<span id="cb32-243"><a href="#cb32-243" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb32-214"><a href="#cb32-214" aria-hidden="true" tabindex="-1"></a>counts_ci <span class="ot">&lt;-</span> counts <span class="sc">|&gt;</span></span>
+<span id="cb32-215"><a href="#cb32-215" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(item) <span class="sc">|&gt;</span></span>
+<span id="cb32-216"><a href="#cb32-216" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ci_low =</span> ci_low, <span class="at">ci_high =</span> ci_high) <span class="sc">|&gt;</span></span>
+<span id="cb32-217"><a href="#cb32-217" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(score))</span>
+<span id="cb32-218"><a href="#cb32-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-219"><a href="#cb32-219" aria-hidden="true" tabindex="-1"></a>counts_ci <span class="sc">|&gt;</span></span>
+<span id="cb32-220"><a href="#cb32-220" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">short_label =</span> <span class="fu">factor</span>(short_label, <span class="at">levels =</span> <span class="fu">rev</span>(short_label))) <span class="sc">|&gt;</span></span>
+<span id="cb32-221"><a href="#cb32-221" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> score, <span class="at">y =</span> short_label)) <span class="sc">+</span></span>
+<span id="cb32-222"><a href="#cb32-222" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"#4C72B0"</span>, <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb32-223"><a href="#cb32-223" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbarh</span>(<span class="fu">aes</span>(<span class="at">xmin =</span> ci_low, <span class="at">xmax =</span> ci_high), <span class="at">height =</span> <span class="fl">0.3</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb32-224"><a href="#cb32-224" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"gray40"</span>) <span class="sc">+</span></span>
+<span id="cb32-225"><a href="#cb32-225" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb32-226"><a href="#cb32-226" aria-hidden="true" tabindex="-1"></a>    <span class="at">title   =</span> <span class="st">"MaxDiff Counts Scores by MSBA Class"</span>,</span>
+<span id="cb32-227"><a href="#cb32-227" aria-hidden="true" tabindex="-1"></a>    <span class="at">x       =</span> <span class="st">"Score (% Best − % Worst)"</span>,</span>
+<span id="cb32-228"><a href="#cb32-228" aria-hidden="true" tabindex="-1"></a>    <span class="at">y       =</span> <span class="cn">NULL</span>,</span>
+<span id="cb32-229"><a href="#cb32-229" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Error bars = 95% bootstrap CI (1,000 resamples of respondents)"</span></span>
+<span id="cb32-230"><a href="#cb32-230" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb32-231"><a href="#cb32-231" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>)</span>
+<span id="cb32-232"><a href="#cb32-232" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb32-233"><a href="#cb32-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-234"><a href="#cb32-234" aria-hidden="true" tabindex="-1"></a>**Observations:** Customer Analytics and Marketing Analytics score highest — students strongly prefer these when shown. BI Systems and Capstone score lowest, with clearly negative scores. The MLE analysis below tests whether these patterns hold up in a formal choice model.</span>
+<span id="cb32-235"><a href="#cb32-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-236"><a href="#cb32-236" aria-hidden="true" tabindex="-1"></a>categories:</span>
+<span id="cb32-237"><a href="#cb32-237" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>R</span>
+<span id="cb32-238"><a href="#cb32-238" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>MaxDiff</span>
+<span id="cb32-239"><a href="#cb32-239" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Bayesian</span>
+<span id="cb32-240"><a href="#cb32-240" aria-hidden="true" tabindex="-1"></a>description: "Best-Worst Scaling survey analysis of MSBA class preferences using Counts, MLE, and Bayesian estimation of the MNL model."</span>
+<span id="cb32-241"><a href="#cb32-241" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb32-242"><a href="#cb32-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-243"><a href="#cb32-243" aria-hidden="true" tabindex="-1"></a><span class="fu">## From MaxDiff Data to MNL Choices</span></span>
 <span id="cb32-244"><a href="#cb32-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-245"><a href="#cb32-245" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Total tasks:"</span>, <span class="fu">nrow</span>(tasks), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb32-246"><a href="#cb32-246" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb32-247"><a href="#cb32-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-248"><a href="#cb32-248" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb32-249"><a href="#cb32-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-250"><a href="#cb32-250" aria-hidden="true" tabindex="-1"></a><span class="fu">## MNL via Maximum Likelihood</span></span>
-<span id="cb32-251"><a href="#cb32-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-252"><a href="#cb32-252" aria-hidden="true" tabindex="-1"></a>The log-likelihood sums over all tasks:</span>
-<span id="cb32-253"><a href="#cb32-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-254"><a href="#cb32-254" aria-hidden="true" tabindex="-1"></a>$$\ell(\boldsymbol\beta) = \sum_{\text{tasks}} \left<span class="co">[</span><span class="ot"> \beta_{j^*_b} - \log\!\sum_{j \in \text{shown}} e^{\beta_j} \;-\; \beta_{j^*_w} - \log\!\!\sum_{j \in \text{shown} \setminus \{j^*_b\}} e^{-\beta_j} \right</span><span class="co">]</span>$$</span>
-<span id="cb32-255"><a href="#cb32-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-256"><a href="#cb32-256" aria-hidden="true" tabindex="-1"></a>where $j^*_b$ = item picked best, $j^*_w$ = item picked worst.</span>
-<span id="cb32-257"><a href="#cb32-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-260"><a href="#cb32-260" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb32-261"><a href="#cb32-261" aria-hidden="true" tabindex="-1"></a><span class="co"># Log-likelihood function</span></span>
-<span id="cb32-262"><a href="#cb32-262" aria-hidden="true" tabindex="-1"></a><span class="co"># beta = length-9 vector for items 2-10; item 1 is pinned to 0</span></span>
-<span id="cb32-263"><a href="#cb32-263" aria-hidden="true" tabindex="-1"></a>log_likelihood <span class="ot">&lt;-</span> <span class="cf">function</span>(beta, tasks) {</span>
-<span id="cb32-264"><a href="#cb32-264" aria-hidden="true" tabindex="-1"></a>  beta_full <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, beta)   <span class="co"># full 10-vector with beta_1 = 0</span></span>
-<span id="cb32-265"><a href="#cb32-265" aria-hidden="true" tabindex="-1"></a>  ll <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb32-266"><a href="#cb32-266" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-267"><a href="#cb32-267" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(tasks))) {</span>
-<span id="cb32-268"><a href="#cb32-268" aria-hidden="true" tabindex="-1"></a>    shown      <span class="ot">&lt;-</span> tasks<span class="sc">$</span>items[[i]]</span>
-<span id="cb32-269"><a href="#cb32-269" aria-hidden="true" tabindex="-1"></a>    best_item  <span class="ot">&lt;-</span> tasks<span class="sc">$</span>best[i]</span>
-<span id="cb32-270"><a href="#cb32-270" aria-hidden="true" tabindex="-1"></a>    worst_item <span class="ot">&lt;-</span> tasks<span class="sc">$</span>worst[i]</span>
-<span id="cb32-271"><a href="#cb32-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-272"><a href="#cb32-272" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Best pick: softmax over all 4 shown items</span></span>
-<span id="cb32-273"><a href="#cb32-273" aria-hidden="true" tabindex="-1"></a>    ll <span class="ot">&lt;-</span> ll <span class="sc">+</span> beta_full[best_item] <span class="sc">-</span> <span class="fu">log</span>(<span class="fu">sum</span>(<span class="fu">exp</span>(beta_full[shown])))</span>
-<span id="cb32-274"><a href="#cb32-274" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-275"><a href="#cb32-275" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Worst pick: softmax over remaining 3 with negated utilities</span></span>
-<span id="cb32-276"><a href="#cb32-276" aria-hidden="true" tabindex="-1"></a>    remaining <span class="ot">&lt;-</span> shown[shown <span class="sc">!=</span> best_item]</span>
-<span id="cb32-277"><a href="#cb32-277" aria-hidden="true" tabindex="-1"></a>    ll <span class="ot">&lt;-</span> ll <span class="sc">-</span> beta_full[worst_item] <span class="sc">-</span> <span class="fu">log</span>(<span class="fu">sum</span>(<span class="fu">exp</span>(<span class="sc">-</span>beta_full[remaining])))</span>
-<span id="cb32-278"><a href="#cb32-278" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb32-245"><a href="#cb32-245" aria-hidden="true" tabindex="-1"></a>The **Multinomial Logit (MNL)** model assigns each class $j$ a utility coefficient $\beta_j$. On a task showing 4 classes $<span class="sc">\{</span>a, b, c, d<span class="sc">\}</span>$, the probability of picking $b$ as *best* is the softmax:</span>
+<span id="cb32-246"><a href="#cb32-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-247"><a href="#cb32-247" aria-hidden="true" tabindex="-1"></a>$$P(\text{best} = b) = \frac{\exp(\beta_b)}{\exp(\beta_a) + \exp(\beta_b) + \exp(\beta_c) + \exp(\beta_d)}$$</span>
+<span id="cb32-248"><a href="#cb32-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-249"><a href="#cb32-249" aria-hidden="true" tabindex="-1"></a>After choosing best, the worst is picked from the remaining 3 classes with **flipped** utilities:</span>
+<span id="cb32-250"><a href="#cb32-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-251"><a href="#cb32-251" aria-hidden="true" tabindex="-1"></a>$$P(\text{worst} = c \mid \text{best} = b) = \frac{\exp(-\beta_c)}{\exp(-\beta_a) + \exp(-\beta_c) + \exp(-\beta_d)}$$</span>
+<span id="cb32-252"><a href="#cb32-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-253"><a href="#cb32-253" aria-hidden="true" tabindex="-1"></a>Each task therefore contributes **two** MNL observations to the likelihood.</span>
+<span id="cb32-254"><a href="#cb32-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-255"><a href="#cb32-255" aria-hidden="true" tabindex="-1"></a>**Identifiability:** The softmax is invariant to adding a constant to all $\beta$'s, so we can only identify *differences* in utility. We fix $\beta_1 = 0$ (AI Math as the reference class) and estimate $\beta_2, \ldots, \beta_{10}$.</span>
+<span id="cb32-256"><a href="#cb32-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-259"><a href="#cb32-259" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb32-260"><a href="#cb32-260" aria-hidden="true" tabindex="-1"></a><span class="co"># Reshape: one row per task, storing the 4 items shown + which was best + which was worst</span></span>
+<span id="cb32-261"><a href="#cb32-261" aria-hidden="true" tabindex="-1"></a>tasks <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
+<span id="cb32-262"><a href="#cb32-262" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(resp_id, task) <span class="sc">|&gt;</span></span>
+<span id="cb32-263"><a href="#cb32-263" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb32-264"><a href="#cb32-264" aria-hidden="true" tabindex="-1"></a>    <span class="at">items =</span> <span class="fu">list</span>(item),</span>
+<span id="cb32-265"><a href="#cb32-265" aria-hidden="true" tabindex="-1"></a>    <span class="at">best  =</span> item[response <span class="sc">==</span>  <span class="dv">1</span>],</span>
+<span id="cb32-266"><a href="#cb32-266" aria-hidden="true" tabindex="-1"></a>    <span class="at">worst =</span> item[response <span class="sc">==</span> <span class="sc">-</span><span class="dv">1</span>],</span>
+<span id="cb32-267"><a href="#cb32-267" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb32-268"><a href="#cb32-268" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb32-269"><a href="#cb32-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-270"><a href="#cb32-270" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Total tasks:"</span>, <span class="fu">nrow</span>(tasks), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb32-271"><a href="#cb32-271" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb32-272"><a href="#cb32-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-273"><a href="#cb32-273" aria-hidden="true" tabindex="-1"></a>categories:</span>
+<span id="cb32-274"><a href="#cb32-274" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>R</span>
+<span id="cb32-275"><a href="#cb32-275" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>MaxDiff</span>
+<span id="cb32-276"><a href="#cb32-276" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Bayesian</span>
+<span id="cb32-277"><a href="#cb32-277" aria-hidden="true" tabindex="-1"></a>description: "Best-Worst Scaling survey analysis of MSBA class preferences using Counts, MLE, and Bayesian estimation of the MNL model."</span>
+<span id="cb32-278"><a href="#cb32-278" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb32-279"><a href="#cb32-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-280"><a href="#cb32-280" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(ll)</span>
-<span id="cb32-281"><a href="#cb32-281" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb32-282"><a href="#cb32-282" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-283"><a href="#cb32-283" aria-hidden="true" tabindex="-1"></a><span class="co"># Maximize the log-likelihood with BFGS</span></span>
-<span id="cb32-284"><a href="#cb32-284" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
-<span id="cb32-285"><a href="#cb32-285" aria-hidden="true" tabindex="-1"></a>mle_result <span class="ot">&lt;-</span> <span class="fu">optim</span>(</span>
-<span id="cb32-286"><a href="#cb32-286" aria-hidden="true" tabindex="-1"></a>  <span class="at">par     =</span> <span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">9</span>),</span>
-<span id="cb32-287"><a href="#cb32-287" aria-hidden="true" tabindex="-1"></a>  <span class="at">fn      =</span> log_likelihood,</span>
-<span id="cb32-288"><a href="#cb32-288" aria-hidden="true" tabindex="-1"></a>  <span class="at">tasks   =</span> tasks,</span>
-<span id="cb32-289"><a href="#cb32-289" aria-hidden="true" tabindex="-1"></a>  <span class="at">method  =</span> <span class="st">"BFGS"</span>,</span>
-<span id="cb32-290"><a href="#cb32-290" aria-hidden="true" tabindex="-1"></a>  <span class="at">hessian =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb32-291"><a href="#cb32-291" aria-hidden="true" tabindex="-1"></a>  <span class="at">control =</span> <span class="fu">list</span>(<span class="at">fnscale =</span> <span class="sc">-</span><span class="dv">1</span>)   <span class="co"># fnscale = -1 tells optim to maximize</span></span>
-<span id="cb32-292"><a href="#cb32-292" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb32-293"><a href="#cb32-293" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-294"><a href="#cb32-294" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Convergence (0 = success):"</span>, mle_result<span class="sc">$</span>convergence, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb32-295"><a href="#cb32-295" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb32-280"><a href="#cb32-280" aria-hidden="true" tabindex="-1"></a><span class="fu">## MNL via Maximum Likelihood</span></span>
+<span id="cb32-281"><a href="#cb32-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-282"><a href="#cb32-282" aria-hidden="true" tabindex="-1"></a>The log-likelihood sums over all tasks:</span>
+<span id="cb32-283"><a href="#cb32-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-284"><a href="#cb32-284" aria-hidden="true" tabindex="-1"></a>$$\ell(\boldsymbol\beta) = \sum_{\text{tasks}} \left<span class="co">[</span><span class="ot"> \beta_{j^*_b} - \log\!\sum_{j \in \text{shown}} e^{\beta_j} \;-\; \beta_{j^*_w} - \log\!\!\sum_{j \in \text{shown} \setminus \{j^*_b\}} e^{-\beta_j} \right</span><span class="co">]</span>$$</span>
+<span id="cb32-285"><a href="#cb32-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-286"><a href="#cb32-286" aria-hidden="true" tabindex="-1"></a>where $j^*_b$ = item picked best, $j^*_w$ = item picked worst.</span>
+<span id="cb32-287"><a href="#cb32-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-290"><a href="#cb32-290" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb32-291"><a href="#cb32-291" aria-hidden="true" tabindex="-1"></a><span class="co"># Log-likelihood function</span></span>
+<span id="cb32-292"><a href="#cb32-292" aria-hidden="true" tabindex="-1"></a><span class="co"># beta = length-9 vector for items 2-10; item 1 is pinned to 0</span></span>
+<span id="cb32-293"><a href="#cb32-293" aria-hidden="true" tabindex="-1"></a>log_likelihood <span class="ot">&lt;-</span> <span class="cf">function</span>(beta, tasks) {</span>
+<span id="cb32-294"><a href="#cb32-294" aria-hidden="true" tabindex="-1"></a>  beta_full <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, beta)   <span class="co"># full 10-vector with beta_1 = 0</span></span>
+<span id="cb32-295"><a href="#cb32-295" aria-hidden="true" tabindex="-1"></a>  ll <span class="ot">&lt;-</span> <span class="dv">0</span></span>
 <span id="cb32-296"><a href="#cb32-296" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-299"><a href="#cb32-299" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb32-300"><a href="#cb32-300" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract estimates, standard errors, and preference shares</span></span>
-<span id="cb32-301"><a href="#cb32-301" aria-hidden="true" tabindex="-1"></a>beta_hat <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, mle_result<span class="sc">$</span>par)</span>
-<span id="cb32-302"><a href="#cb32-302" aria-hidden="true" tabindex="-1"></a>se_hat   <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fu">sqrt</span>(<span class="fu">diag</span>(<span class="fu">solve</span>(<span class="sc">-</span>mle_result<span class="sc">$</span>hessian))))</span>
-<span id="cb32-303"><a href="#cb32-303" aria-hidden="true" tabindex="-1"></a>shares   <span class="ot">&lt;-</span> <span class="fu">exp</span>(beta_hat) <span class="sc">/</span> <span class="fu">sum</span>(<span class="fu">exp</span>(beta_hat))</span>
+<span id="cb32-297"><a href="#cb32-297" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(tasks))) {</span>
+<span id="cb32-298"><a href="#cb32-298" aria-hidden="true" tabindex="-1"></a>    shown      <span class="ot">&lt;-</span> tasks<span class="sc">$</span>items[[i]]</span>
+<span id="cb32-299"><a href="#cb32-299" aria-hidden="true" tabindex="-1"></a>    best_item  <span class="ot">&lt;-</span> tasks<span class="sc">$</span>best[i]</span>
+<span id="cb32-300"><a href="#cb32-300" aria-hidden="true" tabindex="-1"></a>    worst_item <span class="ot">&lt;-</span> tasks<span class="sc">$</span>worst[i]</span>
+<span id="cb32-301"><a href="#cb32-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-302"><a href="#cb32-302" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Best pick: softmax over all 4 shown items</span></span>
+<span id="cb32-303"><a href="#cb32-303" aria-hidden="true" tabindex="-1"></a>    ll <span class="ot">&lt;-</span> ll <span class="sc">+</span> beta_full[best_item] <span class="sc">-</span> <span class="fu">log</span>(<span class="fu">sum</span>(<span class="fu">exp</span>(beta_full[shown])))</span>
 <span id="cb32-304"><a href="#cb32-304" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-305"><a href="#cb32-305" aria-hidden="true" tabindex="-1"></a>mle_table <span class="ot">&lt;-</span> labels <span class="sc">|&gt;</span></span>
-<span id="cb32-306"><a href="#cb32-306" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">beta  =</span> <span class="fu">round</span>(beta_hat, <span class="dv">3</span>),</span>
-<span id="cb32-307"><a href="#cb32-307" aria-hidden="true" tabindex="-1"></a>         <span class="at">se    =</span> <span class="fu">round</span>(se_hat,   <span class="dv">3</span>),</span>
-<span id="cb32-308"><a href="#cb32-308" aria-hidden="true" tabindex="-1"></a>         <span class="at">share =</span> <span class="fu">round</span>(shares,   <span class="dv">3</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb32-309"><a href="#cb32-309" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(share))</span>
-<span id="cb32-310"><a href="#cb32-310" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-311"><a href="#cb32-311" aria-hidden="true" tabindex="-1"></a>mle_table <span class="sc">|&gt;</span></span>
-<span id="cb32-312"><a href="#cb32-312" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(item_num, short_label, beta, se, share) <span class="sc">|&gt;</span></span>
-<span id="cb32-313"><a href="#cb32-313" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
-<span id="cb32-314"><a href="#cb32-314" aria-hidden="true" tabindex="-1"></a>    <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Item #"</span>, <span class="st">"Class"</span>, <span class="st">"beta_hat"</span>, <span class="st">"SE"</span>, <span class="st">"Share"</span>),</span>
-<span id="cb32-315"><a href="#cb32-315" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption   =</span> <span class="st">"MLE Results — sorted by preference share"</span></span>
-<span id="cb32-316"><a href="#cb32-316" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb32-317"><a href="#cb32-317" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb32-318"><a href="#cb32-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-321"><a href="#cb32-321" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb32-322"><a href="#cb32-322" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 8</span></span>
-<span id="cb32-323"><a href="#cb32-323" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 5</span></span>
-<span id="cb32-324"><a href="#cb32-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-325"><a href="#cb32-325" aria-hidden="true" tabindex="-1"></a>mle_table <span class="sc">|&gt;</span></span>
-<span id="cb32-326"><a href="#cb32-326" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">short_label =</span> <span class="fu">factor</span>(short_label, <span class="at">levels =</span> <span class="fu">rev</span>(short_label))) <span class="sc">|&gt;</span></span>
-<span id="cb32-327"><a href="#cb32-327" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> share, <span class="at">y =</span> short_label)) <span class="sc">+</span></span>
-<span id="cb32-328"><a href="#cb32-328" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"#DD8452"</span>, <span class="at">alpha =</span> <span class="fl">0.85</span>) <span class="sc">+</span></span>
-<span id="cb32-329"><a href="#cb32-329" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"MLE Preference Shares by MSBA Class"</span>,</span>
-<span id="cb32-330"><a href="#cb32-330" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Share of Preference"</span>, <span class="at">y =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb32-331"><a href="#cb32-331" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>)</span>
-<span id="cb32-332"><a href="#cb32-332" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb32-333"><a href="#cb32-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-334"><a href="#cb32-334" aria-hidden="true" tabindex="-1"></a>**Comparison to Counts:** The MLE ranking largely matches the counts ranking. The key advantage of MNL is that every item *shown but not chosen* contributes information. Preference shares also have a clean interpretation: if all 10 classes appeared on a single screen, what fraction of choices would each receive?</span>
-<span id="cb32-335"><a href="#cb32-335" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-336"><a href="#cb32-336" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb32-337"><a href="#cb32-337" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-338"><a href="#cb32-338" aria-hidden="true" tabindex="-1"></a><span class="fu">## MNL via Bayesian Estimation</span></span>
-<span id="cb32-339"><a href="#cb32-339" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-340"><a href="#cb32-340" aria-hidden="true" tabindex="-1"></a>We fit the same MNL using a **Metropolis-Hastings (MH)** MCMC sampler. Instead of a single point estimate, we get a full posterior distribution over each $\beta_j$.</span>
-<span id="cb32-341"><a href="#cb32-341" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-342"><a href="#cb32-342" aria-hidden="true" tabindex="-1"></a>**Prior:** $\boldsymbol\beta \sim \mathcal{N}(\mathbf{0},\ 10 \cdot I)$ — weakly informative (SD ≈ 3.2), letting the data dominate.</span>
-<span id="cb32-343"><a href="#cb32-343" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-344"><a href="#cb32-344" aria-hidden="true" tabindex="-1"></a>**Posterior:** $\pi(\boldsymbol\beta \mid \text{data}) \propto L(\boldsymbol\beta) \cdot \pi(\boldsymbol\beta)$</span>
-<span id="cb32-345"><a href="#cb32-345" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-348"><a href="#cb32-348" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb32-349"><a href="#cb32-349" aria-hidden="true" tabindex="-1"></a><span class="co"># Log-posterior = log-likelihood + log-prior (N(0, 10) on each beta)</span></span>
-<span id="cb32-350"><a href="#cb32-350" aria-hidden="true" tabindex="-1"></a>log_prior     <span class="ot">&lt;-</span> <span class="cf">function</span>(beta) <span class="fu">sum</span>(<span class="fu">dnorm</span>(beta, <span class="dv">0</span>, <span class="fu">sqrt</span>(<span class="dv">10</span>), <span class="at">log =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb32-351"><a href="#cb32-351" aria-hidden="true" tabindex="-1"></a>log_posterior <span class="ot">&lt;-</span> <span class="cf">function</span>(beta, tasks) <span class="fu">log_likelihood</span>(beta, tasks) <span class="sc">+</span> <span class="fu">log_prior</span>(beta)</span>
-<span id="cb32-352"><a href="#cb32-352" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-353"><a href="#cb32-353" aria-hidden="true" tabindex="-1"></a><span class="co"># Metropolis-Hastings sampler</span></span>
-<span id="cb32-354"><a href="#cb32-354" aria-hidden="true" tabindex="-1"></a>mh_sampler <span class="ot">&lt;-</span> <span class="cf">function</span>(beta0, n_iter, step, tasks) {</span>
-<span id="cb32-355"><a href="#cb32-355" aria-hidden="true" tabindex="-1"></a>  K      <span class="ot">&lt;-</span> <span class="fu">length</span>(beta0)</span>
-<span id="cb32-356"><a href="#cb32-356" aria-hidden="true" tabindex="-1"></a>  draws  <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="cn">NA</span>, n_iter, K)</span>
-<span id="cb32-357"><a href="#cb32-357" aria-hidden="true" tabindex="-1"></a>  beta   <span class="ot">&lt;-</span> beta0</span>
-<span id="cb32-358"><a href="#cb32-358" aria-hidden="true" tabindex="-1"></a>  lp     <span class="ot">&lt;-</span> <span class="fu">log_posterior</span>(beta, tasks)</span>
-<span id="cb32-359"><a href="#cb32-359" aria-hidden="true" tabindex="-1"></a>  accept <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb32-360"><a href="#cb32-360" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-361"><a href="#cb32-361" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n_iter) {</span>
-<span id="cb32-362"><a href="#cb32-362" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Propose: random walk step</span></span>
-<span id="cb32-363"><a href="#cb32-363" aria-hidden="true" tabindex="-1"></a>    beta_star <span class="ot">&lt;-</span> beta <span class="sc">+</span> <span class="fu">rnorm</span>(K, <span class="dv">0</span>, step)</span>
-<span id="cb32-364"><a href="#cb32-364" aria-hidden="true" tabindex="-1"></a>    lp_star   <span class="ot">&lt;-</span> <span class="fu">log_posterior</span>(beta_star, tasks)</span>
+<span id="cb32-305"><a href="#cb32-305" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Worst pick: softmax over remaining 3 with negated utilities</span></span>
+<span id="cb32-306"><a href="#cb32-306" aria-hidden="true" tabindex="-1"></a>    remaining <span class="ot">&lt;-</span> shown[shown <span class="sc">!=</span> best_item]</span>
+<span id="cb32-307"><a href="#cb32-307" aria-hidden="true" tabindex="-1"></a>    ll <span class="ot">&lt;-</span> ll <span class="sc">-</span> beta_full[worst_item] <span class="sc">-</span> <span class="fu">log</span>(<span class="fu">sum</span>(<span class="fu">exp</span>(<span class="sc">-</span>beta_full[remaining])))</span>
+<span id="cb32-308"><a href="#cb32-308" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb32-309"><a href="#cb32-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-310"><a href="#cb32-310" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(ll)</span>
+<span id="cb32-311"><a href="#cb32-311" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb32-312"><a href="#cb32-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-313"><a href="#cb32-313" aria-hidden="true" tabindex="-1"></a><span class="co"># Maximize the log-likelihood with BFGS</span></span>
+<span id="cb32-314"><a href="#cb32-314" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb32-315"><a href="#cb32-315" aria-hidden="true" tabindex="-1"></a>mle_result <span class="ot">&lt;-</span> <span class="fu">optim</span>(</span>
+<span id="cb32-316"><a href="#cb32-316" aria-hidden="true" tabindex="-1"></a>  <span class="at">par     =</span> <span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">9</span>),</span>
+<span id="cb32-317"><a href="#cb32-317" aria-hidden="true" tabindex="-1"></a>  <span class="at">fn      =</span> log_likelihood,</span>
+<span id="cb32-318"><a href="#cb32-318" aria-hidden="true" tabindex="-1"></a>  <span class="at">tasks   =</span> tasks,</span>
+<span id="cb32-319"><a href="#cb32-319" aria-hidden="true" tabindex="-1"></a>  <span class="at">method  =</span> <span class="st">"BFGS"</span>,</span>
+<span id="cb32-320"><a href="#cb32-320" aria-hidden="true" tabindex="-1"></a>  <span class="at">hessian =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb32-321"><a href="#cb32-321" aria-hidden="true" tabindex="-1"></a>  <span class="at">control =</span> <span class="fu">list</span>(<span class="at">fnscale =</span> <span class="sc">-</span><span class="dv">1</span>)   <span class="co"># fnscale = -1 tells optim to maximize</span></span>
+<span id="cb32-322"><a href="#cb32-322" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb32-323"><a href="#cb32-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-324"><a href="#cb32-324" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Convergence (0 = success):"</span>, mle_result<span class="sc">$</span>convergence, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb32-325"><a href="#cb32-325" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb32-326"><a href="#cb32-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-329"><a href="#cb32-329" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb32-330"><a href="#cb32-330" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract estimates, standard errors, and preference shares</span></span>
+<span id="cb32-331"><a href="#cb32-331" aria-hidden="true" tabindex="-1"></a>beta_hat <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, mle_result<span class="sc">$</span>par)</span>
+<span id="cb32-332"><a href="#cb32-332" aria-hidden="true" tabindex="-1"></a>se_hat   <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fu">sqrt</span>(<span class="fu">diag</span>(<span class="fu">solve</span>(<span class="sc">-</span>mle_result<span class="sc">$</span>hessian))))</span>
+<span id="cb32-333"><a href="#cb32-333" aria-hidden="true" tabindex="-1"></a>shares   <span class="ot">&lt;-</span> <span class="fu">exp</span>(beta_hat) <span class="sc">/</span> <span class="fu">sum</span>(<span class="fu">exp</span>(beta_hat))</span>
+<span id="cb32-334"><a href="#cb32-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-335"><a href="#cb32-335" aria-hidden="true" tabindex="-1"></a>mle_table <span class="ot">&lt;-</span> labels <span class="sc">|&gt;</span></span>
+<span id="cb32-336"><a href="#cb32-336" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">beta  =</span> <span class="fu">round</span>(beta_hat, <span class="dv">3</span>),</span>
+<span id="cb32-337"><a href="#cb32-337" aria-hidden="true" tabindex="-1"></a>         <span class="at">se    =</span> <span class="fu">round</span>(se_hat,   <span class="dv">3</span>),</span>
+<span id="cb32-338"><a href="#cb32-338" aria-hidden="true" tabindex="-1"></a>         <span class="at">share =</span> <span class="fu">round</span>(shares,   <span class="dv">3</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb32-339"><a href="#cb32-339" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(share))</span>
+<span id="cb32-340"><a href="#cb32-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-341"><a href="#cb32-341" aria-hidden="true" tabindex="-1"></a>mle_table <span class="sc">|&gt;</span></span>
+<span id="cb32-342"><a href="#cb32-342" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(item_num, short_label, beta, se, share) <span class="sc">|&gt;</span></span>
+<span id="cb32-343"><a href="#cb32-343" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb32-344"><a href="#cb32-344" aria-hidden="true" tabindex="-1"></a>    <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Item #"</span>, <span class="st">"Class"</span>, <span class="st">"beta_hat"</span>, <span class="st">"SE"</span>, <span class="st">"Share"</span>),</span>
+<span id="cb32-345"><a href="#cb32-345" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption   =</span> <span class="st">"MLE Results — sorted by preference share"</span></span>
+<span id="cb32-346"><a href="#cb32-346" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb32-347"><a href="#cb32-347" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb32-348"><a href="#cb32-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-351"><a href="#cb32-351" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb32-352"><a href="#cb32-352" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 8</span></span>
+<span id="cb32-353"><a href="#cb32-353" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 5</span></span>
+<span id="cb32-354"><a href="#cb32-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-355"><a href="#cb32-355" aria-hidden="true" tabindex="-1"></a>mle_table <span class="sc">|&gt;</span></span>
+<span id="cb32-356"><a href="#cb32-356" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">short_label =</span> <span class="fu">factor</span>(short_label, <span class="at">levels =</span> <span class="fu">rev</span>(short_label))) <span class="sc">|&gt;</span></span>
+<span id="cb32-357"><a href="#cb32-357" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> share, <span class="at">y =</span> short_label)) <span class="sc">+</span></span>
+<span id="cb32-358"><a href="#cb32-358" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"#DD8452"</span>, <span class="at">alpha =</span> <span class="fl">0.85</span>) <span class="sc">+</span></span>
+<span id="cb32-359"><a href="#cb32-359" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"MLE Preference Shares by MSBA Class"</span>,</span>
+<span id="cb32-360"><a href="#cb32-360" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Share of Preference"</span>, <span class="at">y =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb32-361"><a href="#cb32-361" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>)</span>
+<span id="cb32-362"><a href="#cb32-362" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb32-363"><a href="#cb32-363" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-364"><a href="#cb32-364" aria-hidden="true" tabindex="-1"></a>**Comparison to Counts:** The MLE ranking largely matches the counts ranking. The key advantage of MNL is that every item *shown but not chosen* contributes information. Preference shares also have a clean interpretation: if all 10 classes appeared on a single screen, what fraction of choices would each receive?</span>
 <span id="cb32-365"><a href="#cb32-365" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-366"><a href="#cb32-366" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Accept with MH probability</span></span>
-<span id="cb32-367"><a href="#cb32-367" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">log</span>(<span class="fu">runif</span>(<span class="dv">1</span>)) <span class="sc">&lt;</span> lp_star <span class="sc">-</span> lp) {</span>
-<span id="cb32-368"><a href="#cb32-368" aria-hidden="true" tabindex="-1"></a>      beta   <span class="ot">&lt;-</span> beta_star</span>
-<span id="cb32-369"><a href="#cb32-369" aria-hidden="true" tabindex="-1"></a>      lp     <span class="ot">&lt;-</span> lp_star</span>
-<span id="cb32-370"><a href="#cb32-370" aria-hidden="true" tabindex="-1"></a>      accept <span class="ot">&lt;-</span> accept <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb32-371"><a href="#cb32-371" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb32-366"><a href="#cb32-366" aria-hidden="true" tabindex="-1"></a>categories:</span>
+<span id="cb32-367"><a href="#cb32-367" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>R</span>
+<span id="cb32-368"><a href="#cb32-368" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>MaxDiff</span>
+<span id="cb32-369"><a href="#cb32-369" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Bayesian</span>
+<span id="cb32-370"><a href="#cb32-370" aria-hidden="true" tabindex="-1"></a>description: "Best-Worst Scaling survey analysis of MSBA class preferences using Counts, MLE, and Bayesian estimation of the MNL model."</span>
+<span id="cb32-371"><a href="#cb32-371" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb32-372"><a href="#cb32-372" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-373"><a href="#cb32-373" aria-hidden="true" tabindex="-1"></a>    draws[t, ] <span class="ot">&lt;-</span> beta</span>
-<span id="cb32-374"><a href="#cb32-374" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb32-375"><a href="#cb32-375" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-376"><a href="#cb32-376" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">draws =</span> draws, <span class="at">accept_rate =</span> accept <span class="sc">/</span> n_iter)</span>
-<span id="cb32-377"><a href="#cb32-377" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb32-373"><a href="#cb32-373" aria-hidden="true" tabindex="-1"></a><span class="fu">## MNL via Bayesian Estimation</span></span>
+<span id="cb32-374"><a href="#cb32-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-375"><a href="#cb32-375" aria-hidden="true" tabindex="-1"></a>We fit the same MNL using a **Metropolis-Hastings (MH)** MCMC sampler. Instead of a single point estimate, we get a full posterior distribution over each $\beta_j$.</span>
+<span id="cb32-376"><a href="#cb32-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-377"><a href="#cb32-377" aria-hidden="true" tabindex="-1"></a>**Prior:** $\boldsymbol\beta \sim \mathcal{N}(\mathbf{0},\ 10 \cdot I)$ — weakly informative (SD ≈ 3.2), letting the data dominate.</span>
 <span id="cb32-378"><a href="#cb32-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-379"><a href="#cb32-379" aria-hidden="true" tabindex="-1"></a><span class="co"># Run sampler — start from MLE estimate for faster convergence</span></span>
-<span id="cb32-380"><a href="#cb32-380" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb32-381"><a href="#cb32-381" aria-hidden="true" tabindex="-1"></a>n_iter      <span class="ot">&lt;-</span> <span class="dv">20000</span></span>
-<span id="cb32-382"><a href="#cb32-382" aria-hidden="true" tabindex="-1"></a>step        <span class="ot">&lt;-</span> <span class="fl">0.08</span>   <span class="co"># tuned for ~25-40% acceptance rate</span></span>
-<span id="cb32-383"><a href="#cb32-383" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-384"><a href="#cb32-384" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Running MCMC (20,000 iterations)...</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb32-385"><a href="#cb32-385" aria-hidden="true" tabindex="-1"></a>mcmc_result <span class="ot">&lt;-</span> <span class="fu">mh_sampler</span>(mle_result<span class="sc">$</span>par, n_iter, step, tasks)</span>
-<span id="cb32-386"><a href="#cb32-386" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Acceptance rate:"</span>, <span class="fu">round</span>(mcmc_result<span class="sc">$</span>accept_rate, <span class="dv">3</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb32-387"><a href="#cb32-387" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb32-388"><a href="#cb32-388" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-391"><a href="#cb32-391" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb32-392"><a href="#cb32-392" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 10</span></span>
-<span id="cb32-393"><a href="#cb32-393" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 4</span></span>
-<span id="cb32-394"><a href="#cb32-394" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-395"><a href="#cb32-395" aria-hidden="true" tabindex="-1"></a><span class="co"># Trace plots for 3 parameters — good mixing looks like a "fuzzy caterpillar"</span></span>
-<span id="cb32-396"><a href="#cb32-396" aria-hidden="true" tabindex="-1"></a>burn_in      <span class="ot">&lt;-</span> <span class="fu">round</span>(n_iter <span class="sc">*</span> <span class="fl">0.25</span>)</span>
-<span id="cb32-397"><a href="#cb32-397" aria-hidden="true" tabindex="-1"></a>draws_all    <span class="ot">&lt;-</span> mcmc_result<span class="sc">$</span>draws</span>
-<span id="cb32-398"><a href="#cb32-398" aria-hidden="true" tabindex="-1"></a>draws_burnin <span class="ot">&lt;-</span> draws_all[(burn_in <span class="sc">+</span> <span class="dv">1</span>)<span class="sc">:</span>n_iter, ]</span>
-<span id="cb32-399"><a href="#cb32-399" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-400"><a href="#cb32-400" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>), <span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">1</span>))</span>
-<span id="cb32-401"><a href="#cb32-401" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (k <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>) {</span>
-<span id="cb32-402"><a href="#cb32-402" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(draws_all[, k], <span class="at">type =</span> <span class="st">"l"</span>, <span class="at">col =</span> <span class="st">"#4C72B0"</span>,</span>
-<span id="cb32-403"><a href="#cb32-403" aria-hidden="true" tabindex="-1"></a>       <span class="at">main =</span> <span class="fu">paste0</span>(<span class="st">"Trace: beta (item "</span>, k <span class="sc">+</span> <span class="dv">1</span>, <span class="st">")"</span>),</span>
-<span id="cb32-404"><a href="#cb32-404" aria-hidden="true" tabindex="-1"></a>       <span class="at">xlab =</span> <span class="st">"Iteration"</span>, <span class="at">ylab =</span> <span class="st">"beta"</span>)</span>
-<span id="cb32-405"><a href="#cb32-405" aria-hidden="true" tabindex="-1"></a>  <span class="fu">abline</span>(<span class="at">v =</span> burn_in, <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">lty =</span> <span class="dv">2</span>)   <span class="co"># red line = end of burn-in</span></span>
-<span id="cb32-406"><a href="#cb32-406" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb32-407"><a href="#cb32-407" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>))</span>
-<span id="cb32-408"><a href="#cb32-408" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb32-409"><a href="#cb32-409" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-410"><a href="#cb32-410" aria-hidden="true" tabindex="-1"></a>The trace plots show good mixing after burn-in (red dashed line), indicating the chain has converged.</span>
-<span id="cb32-411"><a href="#cb32-411" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-414"><a href="#cb32-414" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb32-415"><a href="#cb32-415" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute posterior summaries from post-burn-in draws</span></span>
-<span id="cb32-416"><a href="#cb32-416" aria-hidden="true" tabindex="-1"></a>draws_full <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">0</span>, draws_burnin)   <span class="co"># add back beta_1 = 0 column</span></span>
-<span id="cb32-417"><a href="#cb32-417" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-418"><a href="#cb32-418" aria-hidden="true" tabindex="-1"></a>post_mean <span class="ot">&lt;-</span> <span class="fu">apply</span>(draws_full, <span class="dv">2</span>, mean)</span>
-<span id="cb32-419"><a href="#cb32-419" aria-hidden="true" tabindex="-1"></a>post_ci   <span class="ot">&lt;-</span> <span class="fu">apply</span>(draws_full, <span class="dv">2</span>, quantile, <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>))</span>
-<span id="cb32-420"><a href="#cb32-420" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-421"><a href="#cb32-421" aria-hidden="true" tabindex="-1"></a><span class="co"># Preference shares: apply softmax to every draw, then average</span></span>
-<span id="cb32-422"><a href="#cb32-422" aria-hidden="true" tabindex="-1"></a>shares_draws    <span class="ot">&lt;-</span> <span class="fu">t</span>(<span class="fu">apply</span>(draws_full, <span class="dv">1</span>, \(b) <span class="fu">exp</span>(b) <span class="sc">/</span> <span class="fu">sum</span>(<span class="fu">exp</span>(b))))</span>
-<span id="cb32-423"><a href="#cb32-423" aria-hidden="true" tabindex="-1"></a>post_share_mean <span class="ot">&lt;-</span> <span class="fu">apply</span>(shares_draws, <span class="dv">2</span>, mean)</span>
-<span id="cb32-424"><a href="#cb32-424" aria-hidden="true" tabindex="-1"></a>post_share_ci   <span class="ot">&lt;-</span> <span class="fu">apply</span>(shares_draws, <span class="dv">2</span>, quantile, <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>))</span>
-<span id="cb32-425"><a href="#cb32-425" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-426"><a href="#cb32-426" aria-hidden="true" tabindex="-1"></a>bayes_table <span class="ot">&lt;-</span> labels <span class="sc">|&gt;</span></span>
-<span id="cb32-427"><a href="#cb32-427" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb32-428"><a href="#cb32-428" aria-hidden="true" tabindex="-1"></a>    <span class="at">post_mean  =</span> <span class="fu">round</span>(post_mean,          <span class="dv">3</span>),</span>
-<span id="cb32-429"><a href="#cb32-429" aria-hidden="true" tabindex="-1"></a>    <span class="at">ci_low     =</span> <span class="fu">round</span>(post_ci[<span class="dv">1</span>, ],       <span class="dv">3</span>),</span>
-<span id="cb32-430"><a href="#cb32-430" aria-hidden="true" tabindex="-1"></a>    <span class="at">ci_high    =</span> <span class="fu">round</span>(post_ci[<span class="dv">2</span>, ],       <span class="dv">3</span>),</span>
-<span id="cb32-431"><a href="#cb32-431" aria-hidden="true" tabindex="-1"></a>    <span class="at">post_share =</span> <span class="fu">round</span>(post_share_mean,    <span class="dv">3</span>),</span>
-<span id="cb32-432"><a href="#cb32-432" aria-hidden="true" tabindex="-1"></a>    <span class="at">share_low  =</span> <span class="fu">round</span>(post_share_ci[<span class="dv">1</span>, ], <span class="dv">3</span>),</span>
-<span id="cb32-433"><a href="#cb32-433" aria-hidden="true" tabindex="-1"></a>    <span class="at">share_high =</span> <span class="fu">round</span>(post_share_ci[<span class="dv">2</span>, ], <span class="dv">3</span>)</span>
-<span id="cb32-434"><a href="#cb32-434" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb32-435"><a href="#cb32-435" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(post_share))</span>
-<span id="cb32-436"><a href="#cb32-436" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-437"><a href="#cb32-437" aria-hidden="true" tabindex="-1"></a>bayes_table <span class="sc">|&gt;</span></span>
-<span id="cb32-438"><a href="#cb32-438" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(item_num, short_label, post_mean, ci_low, ci_high, post_share) <span class="sc">|&gt;</span></span>
-<span id="cb32-439"><a href="#cb32-439" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
-<span id="cb32-440"><a href="#cb32-440" aria-hidden="true" tabindex="-1"></a>    <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Item #"</span>, <span class="st">"Class"</span>, <span class="st">"Post. Mean beta"</span>, <span class="st">"95% CI Low"</span>, <span class="st">"95% CI High"</span>, <span class="st">"Post. Share"</span>),</span>
-<span id="cb32-441"><a href="#cb32-441" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption   =</span> <span class="st">"Bayesian Results — sorted by posterior preference share"</span></span>
-<span id="cb32-442"><a href="#cb32-442" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb32-379"><a href="#cb32-379" aria-hidden="true" tabindex="-1"></a>**Posterior:** $\pi(\boldsymbol\beta \mid \text{data}) \propto L(\boldsymbol\beta) \cdot \pi(\boldsymbol\beta)$</span>
+<span id="cb32-380"><a href="#cb32-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-383"><a href="#cb32-383" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb32-384"><a href="#cb32-384" aria-hidden="true" tabindex="-1"></a><span class="co"># Log-posterior = log-likelihood + log-prior (N(0, 10) on each beta)</span></span>
+<span id="cb32-385"><a href="#cb32-385" aria-hidden="true" tabindex="-1"></a>log_prior     <span class="ot">&lt;-</span> <span class="cf">function</span>(beta) <span class="fu">sum</span>(<span class="fu">dnorm</span>(beta, <span class="dv">0</span>, <span class="fu">sqrt</span>(<span class="dv">10</span>), <span class="at">log =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb32-386"><a href="#cb32-386" aria-hidden="true" tabindex="-1"></a>log_posterior <span class="ot">&lt;-</span> <span class="cf">function</span>(beta, tasks) <span class="fu">log_likelihood</span>(beta, tasks) <span class="sc">+</span> <span class="fu">log_prior</span>(beta)</span>
+<span id="cb32-387"><a href="#cb32-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-388"><a href="#cb32-388" aria-hidden="true" tabindex="-1"></a><span class="co"># Metropolis-Hastings sampler</span></span>
+<span id="cb32-389"><a href="#cb32-389" aria-hidden="true" tabindex="-1"></a>mh_sampler <span class="ot">&lt;-</span> <span class="cf">function</span>(beta0, n_iter, step, tasks) {</span>
+<span id="cb32-390"><a href="#cb32-390" aria-hidden="true" tabindex="-1"></a>  K      <span class="ot">&lt;-</span> <span class="fu">length</span>(beta0)</span>
+<span id="cb32-391"><a href="#cb32-391" aria-hidden="true" tabindex="-1"></a>  draws  <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="cn">NA</span>, n_iter, K)</span>
+<span id="cb32-392"><a href="#cb32-392" aria-hidden="true" tabindex="-1"></a>  beta   <span class="ot">&lt;-</span> beta0</span>
+<span id="cb32-393"><a href="#cb32-393" aria-hidden="true" tabindex="-1"></a>  lp     <span class="ot">&lt;-</span> <span class="fu">log_posterior</span>(beta, tasks)</span>
+<span id="cb32-394"><a href="#cb32-394" aria-hidden="true" tabindex="-1"></a>  accept <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb32-395"><a href="#cb32-395" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-396"><a href="#cb32-396" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n_iter) {</span>
+<span id="cb32-397"><a href="#cb32-397" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Propose: random walk step</span></span>
+<span id="cb32-398"><a href="#cb32-398" aria-hidden="true" tabindex="-1"></a>    beta_star <span class="ot">&lt;-</span> beta <span class="sc">+</span> <span class="fu">rnorm</span>(K, <span class="dv">0</span>, step)</span>
+<span id="cb32-399"><a href="#cb32-399" aria-hidden="true" tabindex="-1"></a>    lp_star   <span class="ot">&lt;-</span> <span class="fu">log_posterior</span>(beta_star, tasks)</span>
+<span id="cb32-400"><a href="#cb32-400" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-401"><a href="#cb32-401" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Accept with MH probability</span></span>
+<span id="cb32-402"><a href="#cb32-402" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">log</span>(<span class="fu">runif</span>(<span class="dv">1</span>)) <span class="sc">&lt;</span> lp_star <span class="sc">-</span> lp) {</span>
+<span id="cb32-403"><a href="#cb32-403" aria-hidden="true" tabindex="-1"></a>      beta   <span class="ot">&lt;-</span> beta_star</span>
+<span id="cb32-404"><a href="#cb32-404" aria-hidden="true" tabindex="-1"></a>      lp     <span class="ot">&lt;-</span> lp_star</span>
+<span id="cb32-405"><a href="#cb32-405" aria-hidden="true" tabindex="-1"></a>      accept <span class="ot">&lt;-</span> accept <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb32-406"><a href="#cb32-406" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb32-407"><a href="#cb32-407" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-408"><a href="#cb32-408" aria-hidden="true" tabindex="-1"></a>    draws[t, ] <span class="ot">&lt;-</span> beta</span>
+<span id="cb32-409"><a href="#cb32-409" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb32-410"><a href="#cb32-410" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-411"><a href="#cb32-411" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">draws =</span> draws, <span class="at">accept_rate =</span> accept <span class="sc">/</span> n_iter)</span>
+<span id="cb32-412"><a href="#cb32-412" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb32-413"><a href="#cb32-413" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-414"><a href="#cb32-414" aria-hidden="true" tabindex="-1"></a><span class="co"># Run sampler — start from MLE estimate for faster convergence</span></span>
+<span id="cb32-415"><a href="#cb32-415" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb32-416"><a href="#cb32-416" aria-hidden="true" tabindex="-1"></a>n_iter      <span class="ot">&lt;-</span> <span class="dv">20000</span></span>
+<span id="cb32-417"><a href="#cb32-417" aria-hidden="true" tabindex="-1"></a>step        <span class="ot">&lt;-</span> <span class="fl">0.08</span>   <span class="co"># tuned for ~25-40% acceptance rate</span></span>
+<span id="cb32-418"><a href="#cb32-418" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-419"><a href="#cb32-419" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Running MCMC (20,000 iterations)...</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb32-420"><a href="#cb32-420" aria-hidden="true" tabindex="-1"></a>mcmc_result <span class="ot">&lt;-</span> <span class="fu">mh_sampler</span>(mle_result<span class="sc">$</span>par, n_iter, step, tasks)</span>
+<span id="cb32-421"><a href="#cb32-421" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Acceptance rate:"</span>, <span class="fu">round</span>(mcmc_result<span class="sc">$</span>accept_rate, <span class="dv">3</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb32-422"><a href="#cb32-422" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb32-423"><a href="#cb32-423" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-426"><a href="#cb32-426" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb32-427"><a href="#cb32-427" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 10</span></span>
+<span id="cb32-428"><a href="#cb32-428" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 4</span></span>
+<span id="cb32-429"><a href="#cb32-429" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-430"><a href="#cb32-430" aria-hidden="true" tabindex="-1"></a><span class="co"># Trace plots for 3 parameters — good mixing looks like a "fuzzy caterpillar"</span></span>
+<span id="cb32-431"><a href="#cb32-431" aria-hidden="true" tabindex="-1"></a>burn_in      <span class="ot">&lt;-</span> <span class="fu">round</span>(n_iter <span class="sc">*</span> <span class="fl">0.25</span>)</span>
+<span id="cb32-432"><a href="#cb32-432" aria-hidden="true" tabindex="-1"></a>draws_all    <span class="ot">&lt;-</span> mcmc_result<span class="sc">$</span>draws</span>
+<span id="cb32-433"><a href="#cb32-433" aria-hidden="true" tabindex="-1"></a>draws_burnin <span class="ot">&lt;-</span> draws_all[(burn_in <span class="sc">+</span> <span class="dv">1</span>)<span class="sc">:</span>n_iter, ]</span>
+<span id="cb32-434"><a href="#cb32-434" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-435"><a href="#cb32-435" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>), <span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">1</span>))</span>
+<span id="cb32-436"><a href="#cb32-436" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (k <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>) {</span>
+<span id="cb32-437"><a href="#cb32-437" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(draws_all[, k], <span class="at">type =</span> <span class="st">"l"</span>, <span class="at">col =</span> <span class="st">"#4C72B0"</span>,</span>
+<span id="cb32-438"><a href="#cb32-438" aria-hidden="true" tabindex="-1"></a>       <span class="at">main =</span> <span class="fu">paste0</span>(<span class="st">"Trace: beta (item "</span>, k <span class="sc">+</span> <span class="dv">1</span>, <span class="st">")"</span>),</span>
+<span id="cb32-439"><a href="#cb32-439" aria-hidden="true" tabindex="-1"></a>       <span class="at">xlab =</span> <span class="st">"Iteration"</span>, <span class="at">ylab =</span> <span class="st">"beta"</span>)</span>
+<span id="cb32-440"><a href="#cb32-440" aria-hidden="true" tabindex="-1"></a>  <span class="fu">abline</span>(<span class="at">v =</span> burn_in, <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">lty =</span> <span class="dv">2</span>)   <span class="co"># red line = end of burn-in</span></span>
+<span id="cb32-441"><a href="#cb32-441" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb32-442"><a href="#cb32-442" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>))</span>
 <span id="cb32-443"><a href="#cb32-443" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb32-444"><a href="#cb32-444" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-447"><a href="#cb32-447" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb32-448"><a href="#cb32-448" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 8</span></span>
-<span id="cb32-449"><a href="#cb32-449" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 5</span></span>
-<span id="cb32-450"><a href="#cb32-450" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-451"><a href="#cb32-451" aria-hidden="true" tabindex="-1"></a>bayes_table <span class="sc">|&gt;</span></span>
-<span id="cb32-452"><a href="#cb32-452" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">short_label =</span> <span class="fu">factor</span>(short_label, <span class="at">levels =</span> <span class="fu">rev</span>(short_label))) <span class="sc">|&gt;</span></span>
-<span id="cb32-453"><a href="#cb32-453" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> post_share, <span class="at">y =</span> short_label)) <span class="sc">+</span></span>
-<span id="cb32-454"><a href="#cb32-454" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"#55A868"</span>, <span class="at">alpha =</span> <span class="fl">0.85</span>) <span class="sc">+</span></span>
-<span id="cb32-455"><a href="#cb32-455" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbarh</span>(<span class="fu">aes</span>(<span class="at">xmin =</span> share_low, <span class="at">xmax =</span> share_high), <span class="at">height =</span> <span class="fl">0.3</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
-<span id="cb32-456"><a href="#cb32-456" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb32-457"><a href="#cb32-457" aria-hidden="true" tabindex="-1"></a>    <span class="at">title   =</span> <span class="st">"Bayesian Preference Shares by MSBA Class"</span>,</span>
-<span id="cb32-458"><a href="#cb32-458" aria-hidden="true" tabindex="-1"></a>    <span class="at">x       =</span> <span class="st">"Posterior Mean Share"</span>,</span>
-<span id="cb32-459"><a href="#cb32-459" aria-hidden="true" tabindex="-1"></a>    <span class="at">y       =</span> <span class="cn">NULL</span>,</span>
-<span id="cb32-460"><a href="#cb32-460" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Error bars = 95% credible interval"</span></span>
-<span id="cb32-461"><a href="#cb32-461" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb32-462"><a href="#cb32-462" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>)</span>
-<span id="cb32-463"><a href="#cb32-463" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb32-464"><a href="#cb32-464" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-465"><a href="#cb32-465" aria-hidden="true" tabindex="-1"></a>**Comparison to MLE:** Posterior means are very close to MLE point estimates, as expected when the prior is weakly informative. The Bayesian approach adds credible intervals on the *shares* for free — just apply softmax to each MCMC draw. Doing this from MLE would require the delta method.</span>
-<span id="cb32-466"><a href="#cb32-466" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-467"><a href="#cb32-467" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb32-468"><a href="#cb32-468" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-469"><a href="#cb32-469" aria-hidden="true" tabindex="-1"></a><span class="fu">## Comparing the Three Methods</span></span>
-<span id="cb32-470"><a href="#cb32-470" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-473"><a href="#cb32-473" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb32-474"><a href="#cb32-474" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge all three methods into one table</span></span>
-<span id="cb32-475"><a href="#cb32-475" aria-hidden="true" tabindex="-1"></a>comparison <span class="ot">&lt;-</span> labels <span class="sc">|&gt;</span></span>
-<span id="cb32-476"><a href="#cb32-476" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(counts     <span class="sc">|&gt;</span> <span class="fu">select</span>(item, score)      <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="at">counts_score =</span> score),</span>
-<span id="cb32-477"><a href="#cb32-477" aria-hidden="true" tabindex="-1"></a>            <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"item_num"</span> <span class="ot">=</span> <span class="st">"item"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb32-478"><a href="#cb32-478" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">counts_rank =</span> <span class="fu">rank</span>(<span class="sc">-</span>counts_score)) <span class="sc">|&gt;</span></span>
-<span id="cb32-479"><a href="#cb32-479" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(mle_table  <span class="sc">|&gt;</span> <span class="fu">select</span>(item_num, share)  <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="at">mle_share =</span> share),</span>
-<span id="cb32-480"><a href="#cb32-480" aria-hidden="true" tabindex="-1"></a>            <span class="at">by =</span> <span class="st">"item_num"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb32-481"><a href="#cb32-481" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mle_rank =</span> <span class="fu">rank</span>(<span class="sc">-</span>mle_share)) <span class="sc">|&gt;</span></span>
-<span id="cb32-482"><a href="#cb32-482" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(bayes_table <span class="sc">|&gt;</span> <span class="fu">select</span>(item_num, post_share) <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="at">bayes_share =</span> post_share),</span>
-<span id="cb32-483"><a href="#cb32-483" aria-hidden="true" tabindex="-1"></a>            <span class="at">by =</span> <span class="st">"item_num"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb32-484"><a href="#cb32-484" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">bayes_rank =</span> <span class="fu">rank</span>(<span class="sc">-</span>bayes_share)) <span class="sc">|&gt;</span></span>
-<span id="cb32-485"><a href="#cb32-485" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(mle_rank)</span>
-<span id="cb32-486"><a href="#cb32-486" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-487"><a href="#cb32-487" aria-hidden="true" tabindex="-1"></a>comparison <span class="sc">|&gt;</span></span>
-<span id="cb32-488"><a href="#cb32-488" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(item_num, short_label, counts_score, counts_rank, mle_share, mle_rank, bayes_share, bayes_rank) <span class="sc">|&gt;</span></span>
-<span id="cb32-489"><a href="#cb32-489" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">c</span>(counts_score, mle_share, bayes_share), \(x) <span class="fu">round</span>(x, <span class="dv">3</span>))) <span class="sc">|&gt;</span></span>
-<span id="cb32-490"><a href="#cb32-490" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
-<span id="cb32-491"><a href="#cb32-491" aria-hidden="true" tabindex="-1"></a>    <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Item #"</span>, <span class="st">"Class"</span>, <span class="st">"Counts Score"</span>, <span class="st">"Counts Rank"</span>,</span>
-<span id="cb32-492"><a href="#cb32-492" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"MLE Share"</span>, <span class="st">"MLE Rank"</span>, <span class="st">"Bayes Share"</span>, <span class="st">"Bayes Rank"</span>),</span>
-<span id="cb32-493"><a href="#cb32-493" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption   =</span> <span class="st">"Comparison of All Three Methods (sorted by MLE rank)"</span></span>
-<span id="cb32-494"><a href="#cb32-494" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb32-495"><a href="#cb32-495" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb32-496"><a href="#cb32-496" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-499"><a href="#cb32-499" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb32-500"><a href="#cb32-500" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 12</span></span>
-<span id="cb32-501"><a href="#cb32-501" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 5</span></span>
-<span id="cb32-502"><a href="#cb32-502" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-503"><a href="#cb32-503" aria-hidden="true" tabindex="-1"></a>item_order <span class="ot">&lt;-</span> comparison <span class="sc">|&gt;</span> <span class="fu">arrange</span>(mle_rank) <span class="sc">|&gt;</span> <span class="fu">pull</span>(short_label) <span class="sc">|&gt;</span> <span class="fu">rev</span>()</span>
-<span id="cb32-504"><a href="#cb32-504" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-505"><a href="#cb32-505" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_rows</span>(</span>
-<span id="cb32-506"><a href="#cb32-506" aria-hidden="true" tabindex="-1"></a>  comparison <span class="sc">|&gt;</span> <span class="fu">select</span>(short_label, <span class="at">value =</span> counts_score) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">method =</span> <span class="st">"Counts"</span>),</span>
-<span id="cb32-507"><a href="#cb32-507" aria-hidden="true" tabindex="-1"></a>  comparison <span class="sc">|&gt;</span> <span class="fu">select</span>(short_label, <span class="at">value =</span> mle_share)    <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">method =</span> <span class="st">"MLE"</span>),</span>
-<span id="cb32-508"><a href="#cb32-508" aria-hidden="true" tabindex="-1"></a>  comparison <span class="sc">|&gt;</span> <span class="fu">select</span>(short_label, <span class="at">value =</span> bayes_share)  <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">method =</span> <span class="st">"Bayesian"</span>)</span>
-<span id="cb32-509"><a href="#cb32-509" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
-<span id="cb32-510"><a href="#cb32-510" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">method      =</span> <span class="fu">factor</span>(method, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Counts"</span>, <span class="st">"MLE"</span>, <span class="st">"Bayesian"</span>)),</span>
-<span id="cb32-511"><a href="#cb32-511" aria-hidden="true" tabindex="-1"></a>         <span class="at">short_label =</span> <span class="fu">factor</span>(short_label, <span class="at">levels =</span> item_order)) <span class="sc">|&gt;</span></span>
-<span id="cb32-512"><a href="#cb32-512" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> value, <span class="at">y =</span> short_label, <span class="at">fill =</span> method)) <span class="sc">+</span></span>
-<span id="cb32-513"><a href="#cb32-513" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">alpha =</span> <span class="fl">0.85</span>) <span class="sc">+</span></span>
-<span id="cb32-514"><a href="#cb32-514" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>method, <span class="at">scales =</span> <span class="st">"free_x"</span>) <span class="sc">+</span></span>
-<span id="cb32-515"><a href="#cb32-515" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Counts"</span> <span class="ot">=</span> <span class="st">"#4C72B0"</span>, <span class="st">"MLE"</span> <span class="ot">=</span> <span class="st">"#DD8452"</span>, <span class="st">"Bayesian"</span> <span class="ot">=</span> <span class="st">"#55A868"</span>)) <span class="sc">+</span></span>
-<span id="cb32-516"><a href="#cb32-516" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Comparison of All Three Methods"</span>, <span class="at">x =</span> <span class="st">"Score / Share"</span>, <span class="at">y =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb32-517"><a href="#cb32-517" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
-<span id="cb32-518"><a href="#cb32-518" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span>
-<span id="cb32-519"><a href="#cb32-519" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb32-520"><a href="#cb32-520" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-521"><a href="#cb32-521" aria-hidden="true" tabindex="-1"></a>**Where they agree:** All three methods consistently rank Customer Analytics and Marketing Analytics at the top, and BI Systems and Capstone at the bottom.</span>
-<span id="cb32-522"><a href="#cb32-522" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-523"><a href="#cb32-523" aria-hidden="true" tabindex="-1"></a>**Where they disagree:** Middle-ranked classes (SQL, Large Data, Biz Analytics) shift slightly across methods because their utilities are similar — small modeling differences can flip their relative order.</span>
-<span id="cb32-524"><a href="#cb32-524" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-525"><a href="#cb32-525" aria-hidden="true" tabindex="-1"></a>**What MNL adds over Counts:** Every item shown but not chosen contributes information. Counts only track the items that were actually selected, making MNL more statistically efficient.</span>
+<span id="cb32-445"><a href="#cb32-445" aria-hidden="true" tabindex="-1"></a>The trace plots show good mixing after burn-in (red dashed line), indicating the chain has converged.</span>
+<span id="cb32-446"><a href="#cb32-446" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-449"><a href="#cb32-449" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb32-450"><a href="#cb32-450" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute posterior summaries from post-burn-in draws</span></span>
+<span id="cb32-451"><a href="#cb32-451" aria-hidden="true" tabindex="-1"></a>draws_full <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">0</span>, draws_burnin)   <span class="co"># add back beta_1 = 0 column</span></span>
+<span id="cb32-452"><a href="#cb32-452" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-453"><a href="#cb32-453" aria-hidden="true" tabindex="-1"></a>post_mean <span class="ot">&lt;-</span> <span class="fu">apply</span>(draws_full, <span class="dv">2</span>, mean)</span>
+<span id="cb32-454"><a href="#cb32-454" aria-hidden="true" tabindex="-1"></a>post_ci   <span class="ot">&lt;-</span> <span class="fu">apply</span>(draws_full, <span class="dv">2</span>, quantile, <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>))</span>
+<span id="cb32-455"><a href="#cb32-455" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-456"><a href="#cb32-456" aria-hidden="true" tabindex="-1"></a><span class="co"># Preference shares: apply softmax to every draw, then average</span></span>
+<span id="cb32-457"><a href="#cb32-457" aria-hidden="true" tabindex="-1"></a>shares_draws    <span class="ot">&lt;-</span> <span class="fu">t</span>(<span class="fu">apply</span>(draws_full, <span class="dv">1</span>, \(b) <span class="fu">exp</span>(b) <span class="sc">/</span> <span class="fu">sum</span>(<span class="fu">exp</span>(b))))</span>
+<span id="cb32-458"><a href="#cb32-458" aria-hidden="true" tabindex="-1"></a>post_share_mean <span class="ot">&lt;-</span> <span class="fu">apply</span>(shares_draws, <span class="dv">2</span>, mean)</span>
+<span id="cb32-459"><a href="#cb32-459" aria-hidden="true" tabindex="-1"></a>post_share_ci   <span class="ot">&lt;-</span> <span class="fu">apply</span>(shares_draws, <span class="dv">2</span>, quantile, <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>))</span>
+<span id="cb32-460"><a href="#cb32-460" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-461"><a href="#cb32-461" aria-hidden="true" tabindex="-1"></a>bayes_table <span class="ot">&lt;-</span> labels <span class="sc">|&gt;</span></span>
+<span id="cb32-462"><a href="#cb32-462" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb32-463"><a href="#cb32-463" aria-hidden="true" tabindex="-1"></a>    <span class="at">post_mean  =</span> <span class="fu">round</span>(post_mean,          <span class="dv">3</span>),</span>
+<span id="cb32-464"><a href="#cb32-464" aria-hidden="true" tabindex="-1"></a>    <span class="at">ci_low     =</span> <span class="fu">round</span>(post_ci[<span class="dv">1</span>, ],       <span class="dv">3</span>),</span>
+<span id="cb32-465"><a href="#cb32-465" aria-hidden="true" tabindex="-1"></a>    <span class="at">ci_high    =</span> <span class="fu">round</span>(post_ci[<span class="dv">2</span>, ],       <span class="dv">3</span>),</span>
+<span id="cb32-466"><a href="#cb32-466" aria-hidden="true" tabindex="-1"></a>    <span class="at">post_share =</span> <span class="fu">round</span>(post_share_mean,    <span class="dv">3</span>),</span>
+<span id="cb32-467"><a href="#cb32-467" aria-hidden="true" tabindex="-1"></a>    <span class="at">share_low  =</span> <span class="fu">round</span>(post_share_ci[<span class="dv">1</span>, ], <span class="dv">3</span>),</span>
+<span id="cb32-468"><a href="#cb32-468" aria-hidden="true" tabindex="-1"></a>    <span class="at">share_high =</span> <span class="fu">round</span>(post_share_ci[<span class="dv">2</span>, ], <span class="dv">3</span>)</span>
+<span id="cb32-469"><a href="#cb32-469" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb32-470"><a href="#cb32-470" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(post_share))</span>
+<span id="cb32-471"><a href="#cb32-471" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-472"><a href="#cb32-472" aria-hidden="true" tabindex="-1"></a>bayes_table <span class="sc">|&gt;</span></span>
+<span id="cb32-473"><a href="#cb32-473" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(item_num, short_label, post_mean, ci_low, ci_high, post_share) <span class="sc">|&gt;</span></span>
+<span id="cb32-474"><a href="#cb32-474" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb32-475"><a href="#cb32-475" aria-hidden="true" tabindex="-1"></a>    <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Item #"</span>, <span class="st">"Class"</span>, <span class="st">"Post. Mean beta"</span>, <span class="st">"95% CI Low"</span>, <span class="st">"95% CI High"</span>, <span class="st">"Post. Share"</span>),</span>
+<span id="cb32-476"><a href="#cb32-476" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption   =</span> <span class="st">"Bayesian Results — sorted by posterior preference share"</span></span>
+<span id="cb32-477"><a href="#cb32-477" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb32-478"><a href="#cb32-478" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb32-479"><a href="#cb32-479" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-482"><a href="#cb32-482" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb32-483"><a href="#cb32-483" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 8</span></span>
+<span id="cb32-484"><a href="#cb32-484" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 5</span></span>
+<span id="cb32-485"><a href="#cb32-485" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-486"><a href="#cb32-486" aria-hidden="true" tabindex="-1"></a>bayes_table <span class="sc">|&gt;</span></span>
+<span id="cb32-487"><a href="#cb32-487" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">short_label =</span> <span class="fu">factor</span>(short_label, <span class="at">levels =</span> <span class="fu">rev</span>(short_label))) <span class="sc">|&gt;</span></span>
+<span id="cb32-488"><a href="#cb32-488" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> post_share, <span class="at">y =</span> short_label)) <span class="sc">+</span></span>
+<span id="cb32-489"><a href="#cb32-489" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"#55A868"</span>, <span class="at">alpha =</span> <span class="fl">0.85</span>) <span class="sc">+</span></span>
+<span id="cb32-490"><a href="#cb32-490" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbarh</span>(<span class="fu">aes</span>(<span class="at">xmin =</span> share_low, <span class="at">xmax =</span> share_high), <span class="at">height =</span> <span class="fl">0.3</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb32-491"><a href="#cb32-491" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb32-492"><a href="#cb32-492" aria-hidden="true" tabindex="-1"></a>    <span class="at">title   =</span> <span class="st">"Bayesian Preference Shares by MSBA Class"</span>,</span>
+<span id="cb32-493"><a href="#cb32-493" aria-hidden="true" tabindex="-1"></a>    <span class="at">x       =</span> <span class="st">"Posterior Mean Share"</span>,</span>
+<span id="cb32-494"><a href="#cb32-494" aria-hidden="true" tabindex="-1"></a>    <span class="at">y       =</span> <span class="cn">NULL</span>,</span>
+<span id="cb32-495"><a href="#cb32-495" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Error bars = 95% credible interval"</span></span>
+<span id="cb32-496"><a href="#cb32-496" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb32-497"><a href="#cb32-497" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>)</span>
+<span id="cb32-498"><a href="#cb32-498" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb32-499"><a href="#cb32-499" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-500"><a href="#cb32-500" aria-hidden="true" tabindex="-1"></a>**Comparison to MLE:** Posterior means are very close to MLE point estimates, as expected when the prior is weakly informative. The Bayesian approach adds credible intervals on the *shares* for free — just apply softmax to each MCMC draw. Doing this from MLE would require the delta method.</span>
+<span id="cb32-501"><a href="#cb32-501" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-502"><a href="#cb32-502" aria-hidden="true" tabindex="-1"></a>categories:</span>
+<span id="cb32-503"><a href="#cb32-503" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>R</span>
+<span id="cb32-504"><a href="#cb32-504" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>MaxDiff</span>
+<span id="cb32-505"><a href="#cb32-505" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Bayesian</span>
+<span id="cb32-506"><a href="#cb32-506" aria-hidden="true" tabindex="-1"></a>description: "Best-Worst Scaling survey analysis of MSBA class preferences using Counts, MLE, and Bayesian estimation of the MNL model."</span>
+<span id="cb32-507"><a href="#cb32-507" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb32-508"><a href="#cb32-508" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-509"><a href="#cb32-509" aria-hidden="true" tabindex="-1"></a><span class="fu">## Comparing the Three Methods</span></span>
+<span id="cb32-510"><a href="#cb32-510" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-513"><a href="#cb32-513" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb32-514"><a href="#cb32-514" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge all three methods into one table</span></span>
+<span id="cb32-515"><a href="#cb32-515" aria-hidden="true" tabindex="-1"></a>comparison <span class="ot">&lt;-</span> labels <span class="sc">|&gt;</span></span>
+<span id="cb32-516"><a href="#cb32-516" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(counts     <span class="sc">|&gt;</span> <span class="fu">select</span>(item, score)      <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="at">counts_score =</span> score),</span>
+<span id="cb32-517"><a href="#cb32-517" aria-hidden="true" tabindex="-1"></a>            <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"item_num"</span> <span class="ot">=</span> <span class="st">"item"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb32-518"><a href="#cb32-518" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">counts_rank =</span> <span class="fu">rank</span>(<span class="sc">-</span>counts_score)) <span class="sc">|&gt;</span></span>
+<span id="cb32-519"><a href="#cb32-519" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(mle_table  <span class="sc">|&gt;</span> <span class="fu">select</span>(item_num, share)  <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="at">mle_share =</span> share),</span>
+<span id="cb32-520"><a href="#cb32-520" aria-hidden="true" tabindex="-1"></a>            <span class="at">by =</span> <span class="st">"item_num"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb32-521"><a href="#cb32-521" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mle_rank =</span> <span class="fu">rank</span>(<span class="sc">-</span>mle_share)) <span class="sc">|&gt;</span></span>
+<span id="cb32-522"><a href="#cb32-522" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(bayes_table <span class="sc">|&gt;</span> <span class="fu">select</span>(item_num, post_share) <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="at">bayes_share =</span> post_share),</span>
+<span id="cb32-523"><a href="#cb32-523" aria-hidden="true" tabindex="-1"></a>            <span class="at">by =</span> <span class="st">"item_num"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb32-524"><a href="#cb32-524" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">bayes_rank =</span> <span class="fu">rank</span>(<span class="sc">-</span>bayes_share)) <span class="sc">|&gt;</span></span>
+<span id="cb32-525"><a href="#cb32-525" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(mle_rank)</span>
 <span id="cb32-526"><a href="#cb32-526" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-527"><a href="#cb32-527" aria-hidden="true" tabindex="-1"></a>**What Bayes adds over MLE:** Credible intervals on any derived quantity (like preference shares) come for free from the posterior draws. MLE would require the delta method to get the same intervals.</span>
-<span id="cb32-528"><a href="#cb32-528" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-529"><a href="#cb32-529" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb32-530"><a href="#cb32-530" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-531"><a href="#cb32-531" aria-hidden="true" tabindex="-1"></a><span class="fu">## Discussion</span></span>
-<span id="cb32-532"><a href="#cb32-532" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-533"><a href="#cb32-533" aria-hidden="true" tabindex="-1"></a>**Substantive findings:** MSBA students most prefer Customer Analytics and Marketing Analytics — courses with direct career application. BI Systems and Capstone score lowest, possibly because students view them as requirements rather than elective interests, or because they are less directly associated with data science job skills.</span>
-<span id="cb32-534"><a href="#cb32-534" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-535"><a href="#cb32-535" aria-hidden="true" tabindex="-1"></a>**Methodological takeaways:**</span>
+<span id="cb32-527"><a href="#cb32-527" aria-hidden="true" tabindex="-1"></a>comparison <span class="sc">|&gt;</span></span>
+<span id="cb32-528"><a href="#cb32-528" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(item_num, short_label, counts_score, counts_rank, mle_share, mle_rank, bayes_share, bayes_rank) <span class="sc">|&gt;</span></span>
+<span id="cb32-529"><a href="#cb32-529" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">c</span>(counts_score, mle_share, bayes_share), \(x) <span class="fu">round</span>(x, <span class="dv">3</span>))) <span class="sc">|&gt;</span></span>
+<span id="cb32-530"><a href="#cb32-530" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb32-531"><a href="#cb32-531" aria-hidden="true" tabindex="-1"></a>    <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Item #"</span>, <span class="st">"Class"</span>, <span class="st">"Counts Score"</span>, <span class="st">"Counts Rank"</span>,</span>
+<span id="cb32-532"><a href="#cb32-532" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"MLE Share"</span>, <span class="st">"MLE Rank"</span>, <span class="st">"Bayes Share"</span>, <span class="st">"Bayes Rank"</span>),</span>
+<span id="cb32-533"><a href="#cb32-533" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption   =</span> <span class="st">"Comparison of All Three Methods (sorted by MLE rank)"</span></span>
+<span id="cb32-534"><a href="#cb32-534" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb32-535"><a href="#cb32-535" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb32-536"><a href="#cb32-536" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-537"><a href="#cb32-537" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Method <span class="pp">|</span> Best for <span class="pp">|</span></span>
-<span id="cb32-538"><a href="#cb32-538" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
-<span id="cb32-539"><a href="#cb32-539" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Counts** <span class="pp">|</span> Quick descriptive summary; executive dashboard; no modeling assumptions <span class="pp">|</span></span>
-<span id="cb32-540"><a href="#cb32-540" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **MLE MNL** <span class="pp">|</span> Rigorous point estimates with standard errors; single number to report <span class="pp">|</span></span>
-<span id="cb32-541"><a href="#cb32-541" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Bayesian MNL** <span class="pp">|</span> Uncertainty on derived quantities (shares, simulations); hierarchical individual-level extensions <span class="pp">|</span></span>
+<span id="cb32-539"><a href="#cb32-539" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb32-540"><a href="#cb32-540" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 12</span></span>
+<span id="cb32-541"><a href="#cb32-541" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 5</span></span>
 <span id="cb32-542"><a href="#cb32-542" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-543"><a href="#cb32-543" aria-hidden="true" tabindex="-1"></a>**Caveats:** This survey was completed by a self-selected group of current MSBA students. Preferences may vary by prior work experience, course order, and academic background. Students who have already completed a class may rate it differently than those who have not yet taken it.</span>
+<span id="cb32-543"><a href="#cb32-543" aria-hidden="true" tabindex="-1"></a>item_order <span class="ot">&lt;-</span> comparison <span class="sc">|&gt;</span> <span class="fu">arrange</span>(mle_rank) <span class="sc">|&gt;</span> <span class="fu">pull</span>(short_label) <span class="sc">|&gt;</span> <span class="fu">rev</span>()</span>
 <span id="cb32-544"><a href="#cb32-544" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-545"><a href="#cb32-545" aria-hidden="true" tabindex="-1"></a>**Next steps:** With more time, I would extend the Bayesian model to a **hierarchical (mixed) MNL** — estimating individual-level $\beta$'s for each student — to reveal whether different subgroups have systematically different class preferences.</span>
+<span id="cb32-545"><a href="#cb32-545" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_rows</span>(</span>
+<span id="cb32-546"><a href="#cb32-546" aria-hidden="true" tabindex="-1"></a>  comparison <span class="sc">|&gt;</span> <span class="fu">select</span>(short_label, <span class="at">value =</span> counts_score) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">method =</span> <span class="st">"Counts"</span>),</span>
+<span id="cb32-547"><a href="#cb32-547" aria-hidden="true" tabindex="-1"></a>  comparison <span class="sc">|&gt;</span> <span class="fu">select</span>(short_label, <span class="at">value =</span> mle_share)    <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">method =</span> <span class="st">"MLE"</span>),</span>
+<span id="cb32-548"><a href="#cb32-548" aria-hidden="true" tabindex="-1"></a>  comparison <span class="sc">|&gt;</span> <span class="fu">select</span>(short_label, <span class="at">value =</span> bayes_share)  <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">method =</span> <span class="st">"Bayesian"</span>)</span>
+<span id="cb32-549"><a href="#cb32-549" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb32-550"><a href="#cb32-550" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">method      =</span> <span class="fu">factor</span>(method, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Counts"</span>, <span class="st">"MLE"</span>, <span class="st">"Bayesian"</span>)),</span>
+<span id="cb32-551"><a href="#cb32-551" aria-hidden="true" tabindex="-1"></a>         <span class="at">short_label =</span> <span class="fu">factor</span>(short_label, <span class="at">levels =</span> item_order)) <span class="sc">|&gt;</span></span>
+<span id="cb32-552"><a href="#cb32-552" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> value, <span class="at">y =</span> short_label, <span class="at">fill =</span> method)) <span class="sc">+</span></span>
+<span id="cb32-553"><a href="#cb32-553" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">alpha =</span> <span class="fl">0.85</span>) <span class="sc">+</span></span>
+<span id="cb32-554"><a href="#cb32-554" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>method, <span class="at">scales =</span> <span class="st">"free_x"</span>) <span class="sc">+</span></span>
+<span id="cb32-555"><a href="#cb32-555" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Counts"</span> <span class="ot">=</span> <span class="st">"#4C72B0"</span>, <span class="st">"MLE"</span> <span class="ot">=</span> <span class="st">"#DD8452"</span>, <span class="st">"Bayesian"</span> <span class="ot">=</span> <span class="st">"#55A868"</span>)) <span class="sc">+</span></span>
+<span id="cb32-556"><a href="#cb32-556" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Comparison of All Three Methods"</span>, <span class="at">x =</span> <span class="st">"Score / Share"</span>, <span class="at">y =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb32-557"><a href="#cb32-557" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb32-558"><a href="#cb32-558" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span>
+<span id="cb32-559"><a href="#cb32-559" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb32-560"><a href="#cb32-560" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-561"><a href="#cb32-561" aria-hidden="true" tabindex="-1"></a>**Where they agree:** All three methods consistently rank Customer Analytics and Marketing Analytics at the top, and BI Systems and Capstone at the bottom.</span>
+<span id="cb32-562"><a href="#cb32-562" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-563"><a href="#cb32-563" aria-hidden="true" tabindex="-1"></a>**Where they disagree:** Middle-ranked classes (SQL, Large Data, Biz Analytics) shift slightly across methods because their utilities are similar — small modeling differences can flip their relative order.</span>
+<span id="cb32-564"><a href="#cb32-564" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-565"><a href="#cb32-565" aria-hidden="true" tabindex="-1"></a>**What MNL adds over Counts:** Every item shown but not chosen contributes information. Counts only track the items that were actually selected, making MNL more statistically efficient.</span>
+<span id="cb32-566"><a href="#cb32-566" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-567"><a href="#cb32-567" aria-hidden="true" tabindex="-1"></a>**What Bayes adds over MLE:** Credible intervals on any derived quantity (like preference shares) come for free from the posterior draws. MLE would require the delta method to get the same intervals.</span>
+<span id="cb32-568"><a href="#cb32-568" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-569"><a href="#cb32-569" aria-hidden="true" tabindex="-1"></a>categories:</span>
+<span id="cb32-570"><a href="#cb32-570" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>R</span>
+<span id="cb32-571"><a href="#cb32-571" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>MaxDiff</span>
+<span id="cb32-572"><a href="#cb32-572" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Bayesian</span>
+<span id="cb32-573"><a href="#cb32-573" aria-hidden="true" tabindex="-1"></a>description: "Best-Worst Scaling survey analysis of MSBA class preferences using Counts, MLE, and Bayesian estimation of the MNL model."</span>
+<span id="cb32-574"><a href="#cb32-574" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb32-575"><a href="#cb32-575" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-576"><a href="#cb32-576" aria-hidden="true" tabindex="-1"></a><span class="fu">## Discussion</span></span>
+<span id="cb32-577"><a href="#cb32-577" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-578"><a href="#cb32-578" aria-hidden="true" tabindex="-1"></a>**Substantive findings:** MSBA students most prefer Customer Analytics and Marketing Analytics — courses with direct career application. BI Systems and Capstone score lowest, possibly because students view them as requirements rather than elective interests, or because they are less directly associated with data science job skills.</span>
+<span id="cb32-579"><a href="#cb32-579" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-580"><a href="#cb32-580" aria-hidden="true" tabindex="-1"></a>**Methodological takeaways:**</span>
+<span id="cb32-581"><a href="#cb32-581" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-582"><a href="#cb32-582" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Method <span class="pp">|</span> Best for <span class="pp">|</span></span>
+<span id="cb32-583"><a href="#cb32-583" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
+<span id="cb32-584"><a href="#cb32-584" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Counts** <span class="pp">|</span> Quick descriptive summary; executive dashboard; no modeling assumptions <span class="pp">|</span></span>
+<span id="cb32-585"><a href="#cb32-585" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **MLE MNL** <span class="pp">|</span> Rigorous point estimates with standard errors; single number to report <span class="pp">|</span></span>
+<span id="cb32-586"><a href="#cb32-586" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Bayesian MNL** <span class="pp">|</span> Uncertainty on derived quantities (shares, simulations); hierarchical individual-level extensions <span class="pp">|</span></span>
+<span id="cb32-587"><a href="#cb32-587" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-588"><a href="#cb32-588" aria-hidden="true" tabindex="-1"></a>**Caveats:** This survey was completed by a self-selected group of current MSBA students. Preferences may vary by prior work experience, course order, and academic background. Students who have already completed a class may rate it differently than those who have not yet taken it.</span>
+<span id="cb32-589"><a href="#cb32-589" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-590"><a href="#cb32-590" aria-hidden="true" tabindex="-1"></a>**Next steps:** With more time, I would extend the Bayesian model to a **hierarchical (mixed) MNL** — estimating individual-level $\beta$'s for each student — to reveal whether different subgroups have systematically different class preferences.</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
