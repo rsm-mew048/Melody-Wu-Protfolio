@@ -9,8 +9,8 @@
   {
     "listing": "/posts/index.html",
     "items": [
-      "/posts/hw4-maxdiff/index.html",
       "/posts/hw2-karlan-list/index.html",
+      "/posts/hw4-maxdiff/index.html",
       "/posts/hw3-blueprinty/index.html",
       "/posts/hw1-ab-testing/index.html"
     ]
