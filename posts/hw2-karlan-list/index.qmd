@@ -6,6 +6,7 @@ date: today
 categories: [causal inference, field experiment, replication]
 image: "karlan_list_figures.png"
 ---
+
 ## Introduction
 
 How do you get people to donate more to charity? One popular fundraising strategy is the **matching gift**: a lead donor pledges to match every dollar given by the public at some ratio (1:1, 2:1, or 3:1). Fundraising consultants swear by this technique, especially the conventional wisdom that bigger match ratios are more powerful. But is that actually true?
@@ -191,7 +192,7 @@ print(f"  N (donors only): {int(ols_cond.nobs)}")
 The unconditional OLS confirms the treatment raises average giving by about $0.15 per letter sent (marginally significant at the 10% level). Importantly, among people *who actually gave*, the treatment coefficient is close to zero and insignificant — the match works mainly by *getting more people to donate*, not by making existing donors give more.
 
 
-## Something Additional: The Red State Effect
+## Extension: The Red State Effect
 
 One of the most striking findings in Karlan & List (2007) is a **heterogeneous treatment effect by political geography**. The match offer worked powerfully in states that voted for George W. Bush in 2004 ("red states") but had essentially no effect in states that went for John Kerry ("blue states").
 
@@ -224,7 +225,7 @@ print(f"\nInteraction model (full sample):")
 print(p_interact.summary().tables[1])
 ```
 
-The table below visually summarizes this pattern — and I present it graphically to make the contrast vivid:
+The figure below visually summarizes this pattern — and I present it graphically to make the contrast vivid:
 
 ```{python}
 import matplotlib.pyplot as plt
@@ -286,8 +287,6 @@ plt.savefig('karlan_list_figures.png', dpi=150, bbox_inches='tight')
 plt.show()
 print("Figure saved.")
 ```
-
-![Main results from the replication](karlan_list_figures.png)
 
 Several features of this finding are worth highlighting:
 
